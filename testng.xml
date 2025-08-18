@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="AppiumTestSuite" parallel="true" thread-count="4">
+    <listeners>
+        <listener class-name="Utils.Listeners" />
+    </listeners>
+    <test name="LoginTests">
+        <classes>
+            <class name="Test.WdioDemoTest"/>
+        </classes>
+    </test>
+</suite>
