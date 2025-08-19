@@ -18,7 +18,12 @@ public class WdioDemoTest extends BaseTest {
 
 
     @Test
-    public void dragAndDropOperationOnRobotPuzzle(){
+    public void dragAndDropOperationOnRobotPuzzle() throws InterruptedException {
         test.workingOnDragAndDropRoboPuzzle();
+    }
+
+    @Test
+    public void swipOperation() throws InterruptedException {
+        test.workingOnSwipeAction();
     }
 }

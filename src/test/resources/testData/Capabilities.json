@@ -8,9 +8,8 @@
     "AppActivity": "com.google.android.dialer.extensions.GoogleDialtactsActivity",
     "BrowserName": "Chrome",
     "platformVersion": "13.0",
+    "automationName": "UiAutomator2",
     "AppUrl": "bs://17844941d8b01487145c23771d3b18d01a3557ca",
-    "AppActivityCloud": "",
-    "AppPackageCloud": "",
     "CloudTestUrl": "http://hub-cloud.browserstack.com/wd/hub",
     "testType": "Cloud"
   },
@@ -19,7 +18,9 @@
     "deviceName": "Google Pixel 7 Pro",
     "PlatformVersion": "13.0",
     "automationName": "UiAutomator2",
-    "AppUrl": "bs://17844941d8b01487145c23771d3b18d01a3557ca"
+    "AppUrl": "bs://7048dcb7a60d6146d5b4fa6e7ba02f0c1e8985cd",
+
   }
+
 
 ]

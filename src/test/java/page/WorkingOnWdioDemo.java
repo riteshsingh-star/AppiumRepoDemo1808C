@@ -3,6 +3,8 @@ package page;
 import Base.BaseTest;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -17,14 +19,27 @@ public class WorkingOnWdioDemo extends BaseTest {
 
     private By dragNDrop = AppiumBy.androidUIAutomator("new UiSelector().text(\"Drag\")");
     private By successMessage=AppiumBy.androidUIAutomator("new UiSelector().text(\"You made it, click retry if you want to try it again.\")");
+    private By swipe=By.xpath("//android.widget.TextView[@text=\"\uDB82\uDD3C\"]");
 
-
-    public void workingOnDragAndDropRoboPuzzle() {
+    public void workingOnDragAndDropRoboPuzzle() throws InterruptedException {
+        syncUntil(4000);
             driver.findElement(dragNDrop).click();
             for(int i=0;i<getSourceItems.size();i++){
                 dragAndDrop(getEl(getSourceItems.get(i)),getEl(getTargetItems.get(i)));
             }
             System.out.println(driver.findElement(successMessage).getText());
+    }
+
+    public void workingOnSwipeAction() throws InterruptedException {
+        driver.findElement(swipe).click();
+        Thread.sleep(4000);
+        WebElement element = driver.findElement(By.xpath("(//android.view.ViewGroup[@content-desc='card'])[1]"));
+        Thread.sleep(2000);
+        //swipeOnElement(element,ScrollDirection.UP,700);
+        swipeOnElement(element,ScrollDirection.LEFT,300);
+        WebElement element1 = driver.findElement(By.xpath("(//android.view.ViewGroup[@content-desc='card'])[2]"));
+        swipeOnElement(element1,ScrollDirection.RIGHT,300);
+
     }
 
     static ArrayList<String> getSourceItems = new ArrayList<>(
@@ -41,6 +56,5 @@ public class WorkingOnWdioDemo extends BaseTest {
 
     public WebElement getEl(String item) {
         return driver.findElement(AppiumBy.accessibilityId(item));
-
     }
 }

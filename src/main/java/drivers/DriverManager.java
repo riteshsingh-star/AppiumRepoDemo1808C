@@ -48,12 +48,18 @@ public class DriverManager {
                 browserStackOptions.put("userName", "codecraft1");
                 browserStackOptions.put("accessKey", "jxLRH9wEpQpgP2zrKptA");
                 options.setPlatformVersion(data.get("platformVersion"));
+                options.setPlatformName(data2.get("platformName"));
+                options.setDeviceName(data2.get("deviceName"));
+                options.setAutomationName(data2.get("automationName"));
+                options.setPlatformVersion(data2.get("platformVersion"));
                 options.setCapability("app", data.get("AppUrl"));
+                options.setCapability("app", data2.get("AppUrl"));
                 options.setCapability("bstack:options", browserStackOptions);
+                driver = new AndroidDriver(new URL("https://hub.browserstack.com/wd/hub"), options);
                 driver = new AndroidDriver(new URL("https://hub.browserstack.com/wd/hub"), options);
 
             }
-            // driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
+            //driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
