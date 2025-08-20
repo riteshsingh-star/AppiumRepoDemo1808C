@@ -3,14 +3,14 @@
 <suite thread-count="1" name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="1" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="Test.WorkingWithGeneralStoreTest">
+      <class name="Test.WdioDemoTest">
         <methods>
           <include name="setUpPage"/>
-          <include name="basicActionOnGeneralStoreApp"/>
           <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="dragAndDropOperationOnRobotPuzzle"/>
         </methods>
-      </class> <!-- Test.WorkingWithGeneralStoreTest -->
+      </class> <!-- Test.WdioDemoTest -->
       <class name="Test.WorkingWithApiDemoTest">
         <methods>
           <include name="dragDrop"/>
@@ -23,24 +23,6 @@
           <include name="setUp"/>
         </methods>
       </class> <!-- Test.WorkingWithApiDemoTest -->
-      <class name="Test.WorkingWithBrowserTest">
-        <methods>
-          <include name="alertsDemo"/>
-          <include name="setUpPage"/>
-          <include name="performBrowserAction"/>
-          <include name="tearDown"/>
-          <include name="demoRegisterTest"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- Test.WorkingWithBrowserTest -->
-      <class name="Test.WdioDemoTest">
-        <methods>
-          <include name="setUpPage"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="dragAndDropOperationOnRobotPuzzle"/>
-        </methods>
-      </class> <!-- Test.WdioDemoTest -->
       <class name="Test.DialerAppTest">
         <methods>
           <include name="performCall"/>
@@ -50,6 +32,24 @@
           <include name="setUpPage"/>
         </methods>
       </class> <!-- Test.DialerAppTest -->
+      <class name="Test.WorkingWithBrowserTest">
+        <methods>
+          <include name="alertsDemo"/>
+          <include name="setUpPage"/>
+          <include name="performBrowserAction"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="demoRegisterTest"/>
+        </methods>
+      </class> <!-- Test.WorkingWithBrowserTest -->
+      <class name="Test.WorkingWithGeneralStoreTest">
+        <methods>
+          <include name="setUpPage"/>
+          <include name="tearDown"/>
+          <include name="basicActionOnGeneralStoreApp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- Test.WorkingWithGeneralStoreTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->

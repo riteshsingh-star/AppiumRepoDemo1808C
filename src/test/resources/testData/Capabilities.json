@@ -22,7 +22,7 @@
     "automationName": "UiAutomator2",
     "AppUrl": "bs://17844941d8b01487145c23771d3b18d01a3557ca",
     "CloudTestUrl": "http://hub-cloud.browserstack.com/wd/hub",
-    "testType": "Apk",
+    "testType": "Chrome",
     "Port": "4725",
     "FilePath": "C:\\CodeCraft Code\\appiumDemoFramework\\apps",
     "AppName": "General-Store",

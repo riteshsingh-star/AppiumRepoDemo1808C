@@ -12,10 +12,10 @@
         </classes>
     </test>
 
-    <test name="Device2Test">
+    <!--<test name="Device2Test">
         <parameter name="deviceIndex" value="1"/>
         <classes>
             <class name="Test.WorkingWithGeneralStoreTest"/>
         </classes>
-    </test>
+    </test>-->
 </suite>

@@ -1,5 +1,6 @@
 package drivers;
 
+import Utils.AppiumLogDriverActions;
 import Utils.JsonUtils;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
@@ -57,7 +58,7 @@ public class DriverManager {
                 options.setPlatformVersion(data.get("platformVersion"));
                 options.setCapability("app", data.get("AppUrl"));
                 options.setCapability("bstack:options", browserStackOptions);
-                driver.set(new AndroidDriver(new URL("https://hub.browserstack.com/wd/hub"), options));
+                driver.set(new AppiumLogDriverActions(new URL("https://hub.browserstack.com/wd/hub"), options));
                 return;
             }
 
@@ -66,6 +67,7 @@ public class DriverManager {
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
+
     }
 
     public static AndroidDriver getDriver() {
