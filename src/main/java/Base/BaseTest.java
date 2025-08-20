@@ -2,6 +2,7 @@ package Base;
 
 import com.google.common.collect.ImmutableList;
 import drivers.DriverManager;
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
@@ -10,14 +11,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Pause;
 import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
 
 import java.time.Duration;
 import java.util.Arrays;
@@ -29,9 +26,10 @@ public class BaseTest {
     public AndroidDriver driver;
 
 
-    @BeforeTest
-    public void setUp() {
-        DriverManager.initializeDriver();
+    @BeforeTest(alwaysRun = true)
+    @Parameters({"deviceIndex"})
+    public void setUp(int deviceIndex) {
+        DriverManager.initializeDriver(deviceIndex); // pass index
         driver = DriverManager.getDriver();
     }
 
@@ -222,6 +220,10 @@ public class BaseTest {
                 ignoring(Exception.class);
     }
 
-
+    public void scrollForwardAndSelectOption(String textToFind){
+        WebElement element = driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()." + "" +
+                "scrollable(true))" + ".scrollIntoView(new UiSelector(text(\"" + textToFind + "\")));"));
+        element.click();
+    }
 
 }

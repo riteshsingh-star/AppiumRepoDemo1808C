@@ -1,2 +1,11 @@
-page\WorkingWithAPIDemos.class
+page\WorkingOnMessageSender.class
+page\WorkingWithDialerButton.class
+Test\DialerAppTest.class
+Test\WorkingWithBrowserTest.class
+Test\WdioDemoTest.class
 Test\WorkingWithApiDemoTest.class
+page\WorkingOnMobileBrowsers.class
+page\WorkingWithGeneralStore.class
+page\WorkingWithAPIDemos.class
+Test\WorkingWithGeneralStoreTest.class
+page\WorkingOnWdioDemo.class

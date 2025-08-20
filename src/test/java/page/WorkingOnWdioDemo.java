@@ -15,7 +15,7 @@ public class WorkingOnWdioDemo extends BaseTest {
         this.driver = driver;
     }
 
-    private By dragNDrop = AppiumBy.androidUIAutomator("new UiSelector().text(\"Drag\")");
+    private By dragNDrop = By.xpath("//android.widget.TextView[@text=\"Drag\"]");
     private By successMessage=AppiumBy.androidUIAutomator("new UiSelector().text(\"You made it, click retry if you want to try it again.\")");
 
 

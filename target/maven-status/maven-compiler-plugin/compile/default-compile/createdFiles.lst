@@ -1,4 +1,5 @@
 Utils\Listeners.class
+Utils\AppiumLogDriverActions.class
 Utils\ExtentReportManager.class
 Base\BaseTest.class
 drivers\DriverManager.class

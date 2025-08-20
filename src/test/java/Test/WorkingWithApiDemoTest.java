@@ -17,7 +17,7 @@ public class WorkingWithApiDemoTest extends BaseTest {
     @BeforeClass
     public void setUpPage() {
         test = new WorkingWithAPIDemos(driver);
-       testData= JsonUtils.getJsonArrayFromJsonFile("ApiDemos.json");
+        testData= JsonUtils.getJsonArrayFromJsonFile("ApiDemos.json");
         data = testData.get(0);
     }
 
