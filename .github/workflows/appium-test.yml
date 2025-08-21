@@ -49,7 +49,7 @@ jobs:
 
       - name: 🚀 Start Appium Server
         run: |
-          nohup appium --log appium.log > /dev/null 2>&1 &
+          nohup appium --log appium-log.log > /dev/null 2>&1 &
           sleep 15
 
       - name: 🧠 Set deviceIndex from input or fallback
