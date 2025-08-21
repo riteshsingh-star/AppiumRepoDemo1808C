@@ -20,6 +20,7 @@ jobs:
 
     env:
       ANDROID_HOME: /opt/android-sdk
+      PATH: ${{ env.ANDROID_HOME }}/platform-tools:${{ env.PATH }}
 
     steps:
       - name: Checkout Code
@@ -39,11 +40,6 @@ jobs:
           arch: x86_64
           profile: pixel
           script: echo "Emulator is ready"
-          
-      - name: Add Android SDK tools to PATH
-        run: |
-          yes | sdkmanager --install "platform-tools"
-          echo "$ANDROID_HOME/platform-tools" >> $GITHUB_PATH
 
       - name: Install Node.js and Appium
         run: |
@@ -54,20 +50,18 @@ jobs:
 
       - name: Start Appium Server
         run: |
-          nohup appium --log appium-log.log > /dev/null 2>&1 &
+          nohup appium --log appium.log > /dev/null 2>&1 &
           sleep 15
 
       - name: Set deviceIndex from input or fallback
         run: |
-          DEVICE_INDEX="${{ github.event.inputs.deviceIndex }}"
-          if [ -z "$DEVICE_INDEX" ]; then
-            DEVICE_INDEX=0
-          fi
-          echo "DEVICE_INDEX=$DEVICE_INDEX" >> $GITHUB_ENV
+          if [ -z "${{ github.event.inputs.deviceIndex }}" ]; then
+            echo "DEVICE_INDEX=0" >> $GITHUB_ENV
+          else
+            echo "DEVICE_INDEX=${{ github.event.inputs.deviceIndex }}" >> $GITHUB_ENV
 
       - name: Build and Run Tests with Maven (Passing deviceIndex)
-        run: |
-          mvn clean test -DdeviceIndex=${{ env.DEVICE_INDEX }}
+        run: mvn clean test -DdeviceIndex=${{ env.DEVICE_INDEX }}
 
       - name: Upload Test Reports
         if: always()
