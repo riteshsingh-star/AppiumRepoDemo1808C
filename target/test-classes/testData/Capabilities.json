@@ -1,24 +1,31 @@
 [
   {
     "platformName": "Android",
-    "deviceName": "Samsung Galaxy S23 Ultra",
+    "deviceName": "emulator-5554",
+    "platformVersion": "13.0",
+    "automationName": "UiAutomator2",
     "FilePath": "C:\\CodeCraft Code\\appiumDemoFramework\\apps",
-    "AppName": "android.wdio.native.app.v1.0.8",
+    "AppName": "General-Store",
     "AppPackage": "com.google.android.dialer",
     "AppActivity": "com.google.android.dialer.extensions.GoogleDialtactsActivity",
     "BrowserName": "Chrome",
+    "AppUrl": "bs://17844941d8b01487145c23771d3b18d01a3557ca",
+    "CloudTestUrl": "http://hub-cloud.browserstack.com/wd/hub",
+    "testType": "Browser",
+    "Port": "4723",
+    "appiumPort": "8200"
+  },
+  {
+    "platformName": "Android",
+    "deviceName": "emulator-5556",
     "platformVersion": "13.0",
     "automationName": "UiAutomator2",
     "AppUrl": "bs://17844941d8b01487145c23771d3b18d01a3557ca",
     "CloudTestUrl": "http://hub-cloud.browserstack.com/wd/hub",
-    "testType": "Cloud"
-  },
-  {
-    "PlatformName": "Android",
-    "deviceName": "Google Pixel 7 Pro",
-    "PlatformVersion": "13.0",
-    "automationName": "UiAutomator2",
-    "AppUrl": "bs://7048dcb7a60d6146d5b4fa6e7ba02f0c1e8985cd"
+    "testType": "Chrome",
+    "Port": "4725",
+    "FilePath": "C:\\CodeCraft Code\\appiumDemoFramework\\apps",
+    "AppName": "General-Store",
+    "appiumPort": "8201"
   }
-
 ]

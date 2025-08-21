@@ -1,8 +1,11 @@
 Utils\Listeners.class
+Utils\AppiumLogDriverActions.class
 Utils\ExtentReportManager.class
 Base\BaseTest.class
+Utils\ExtentManager.class
 drivers\DriverManager.class
 Utils\JsonUtils$1.class
 Utils\JsonUtils.class
 Utils\ScreenshotUtils.class
+Utils\LoggingWebElement.class
 Base\BaseTest$ScrollDirection.class

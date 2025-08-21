@@ -4,9 +4,7 @@ import Base.BaseTest;
 import Utils.JsonUtils;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import page.WorkingWithAPIDemos;
 import page.WorkingWithGeneralStore;
-
 import java.util.List;
 import java.util.Map;
 

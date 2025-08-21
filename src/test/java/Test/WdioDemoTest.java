@@ -1,6 +1,7 @@
 package Test;
 
 import Base.BaseTest;
+import org.apache.log4j.Logger;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import page.WorkingOnWdioDemo;
@@ -8,6 +9,7 @@ import page.WorkingOnWdioDemo;
 
 public class WdioDemoTest extends BaseTest {
 
+    static final Logger logger = Logger.getLogger(WdioDemoTest.class);
     private WorkingOnWdioDemo test;
 
 
@@ -18,12 +20,9 @@ public class WdioDemoTest extends BaseTest {
 
 
     @Test
-    public void dragAndDropOperationOnRobotPuzzle() throws InterruptedException {
+    public void dragAndDropOperationOnRobotPuzzle(){
+        logger.info("Start dragAndDropOperationOnRobotPuzzle");
         test.workingOnDragAndDropRoboPuzzle();
-    }
-
-    @Test
-    public void swipOperation() throws InterruptedException {
-        test.workingOnSwipeAction();
+        logger.info("Finished dragAndDropOperationOnRobotPuzzle");
     }
 }

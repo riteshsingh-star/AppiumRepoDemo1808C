@@ -1,6 +1,18 @@
 [
   {
     "UserName": "Admin",
-    "Password": "admin123"
+    "Password": "admin123",
+    "firstNameVal": "Demo",
+    "lastNameVal": "QA",
+    "add": "Mysore",
+    "emailVal": "demoQa@gmail.com",
+    "phoneNum": "9856231478",
+    "gender": "Male",
+    "hobbies": "Cricket",
+    "skills": "Android",
+    "year": "2000",
+    "month": "March",
+    "day": "14",
+    "password": "demoQA12@23"
   }
 ]

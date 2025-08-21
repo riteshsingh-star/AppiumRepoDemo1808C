@@ -2,7 +2,10 @@ package Base;
 
 import com.google.common.collect.ImmutableList;
 import drivers.DriverManager;
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
+import org.apache.log4j.Logger;
+import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
@@ -10,15 +13,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Pause;
 import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
-
+import org.testng.annotations.*;
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.Collections;
@@ -26,18 +24,23 @@ import java.util.Collections;
 
 public class BaseTest {
 
+    static final Logger logger = Logger.getLogger(BaseTest.class);
+
     public AndroidDriver driver;
 
 
-    @BeforeTest
-    public void setUp() {
-        DriverManager.initializeDriver();
+    @BeforeTest(alwaysRun = true)
+    @Parameters({"deviceIndex"})
+    public void setUp(int deviceIndex) {
+        DriverManager.initializeDriver(deviceIndex); // pass index
         driver = DriverManager.getDriver();
+        logger.info("Driver initialized");
     }
 
     @AfterTest
     public void tearDown() {
         driver.quit();
+        logger.info("Driver closed");
     }
 
     public void performTapOperation(WebElement element) {
@@ -48,6 +51,54 @@ public class BaseTest {
                 addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg())).
                 addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
         driver.perform(Collections.singletonList(sequence));
+    }
+
+    public void performPinchOperation(WebDriver driver1){
+        Dimension dimension = driver1.manage().window().getSize();
+        int centerX = dimension.width / 2;
+        int centerY = dimension.height / 2;
+
+        int startY1 = centerY - centerY / 2;
+        int startY2 = centerY + centerY / 2;
+
+        PointerInput finger1 = new PointerInput(PointerInput.Kind.TOUCH, "Finger");
+        PointerInput finger2 = new PointerInput(PointerInput.Kind.TOUCH, "Finger");
+        Sequence sequence1=new Sequence(finger1,1).
+               addAction(finger1.createPointerMove(Duration.ZERO,PointerInput.Origin.viewport(),centerX,startY1)).
+                addAction(finger1.createPointerDown(PointerInput.MouseButton.LEFT.asArg())).
+                addAction(finger1.createPointerMove(Duration.ofMillis(200),PointerInput.Origin.viewport(),centerX,centerY)).
+                addAction(finger1.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+        Sequence sequence2=new Sequence(finger2,1).
+                addAction(finger2.createPointerMove(Duration.ZERO),PointerInput.Origin.viewport(),centerX,startY2).
+                addAction(finger2.createPointerDown(PointerInput.MouseButton.LEFT.asArg())).
+                addAction(finger2.createPointerMove(Duration.ofMillis(200),PointerInput.Origin.viewport(),centerX,centerY)).
+                addAction(finger2.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+        driver.perform(Arrays.asList(sequence1,sequence2));
+    }
+
+    public void performZoomOperation(WebDriver driver2){
+        Dimension dimension = driver2.manage().window().getSize();
+        int centerX = dimension.width / 2;
+        int centerY = dimension.height / 2;
+
+        int endY1 = centerY - centerY / 2;
+        int endY2 = centerY + centerY / 2;
+
+        PointerInput finger1 = new PointerInput(PointerInput.Kind.TOUCH, "Finger");
+        PointerInput finger2 = new PointerInput(PointerInput.Kind.TOUCH, "Finger");
+
+        Sequence sequence1=new Sequence(finger1,1).
+                addAction(finger1.createPointerMove(Duration.ZERO,PointerInput.Origin.viewport(),centerX,centerY)).
+                addAction(finger1.createPointerDown(PointerInput.MouseButton.LEFT.asArg())).
+                addAction(finger1.createPointerMove(Duration.ofMillis(200),PointerInput.Origin.viewport(),centerX,endY1)).
+                addAction(finger1.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+
+        Sequence sequence2=new Sequence(finger2,1).
+                addAction(finger2.createPointerMove(Duration.ZERO,PointerInput.Origin.viewport(),centerX,centerY)).
+                addAction(finger2.createPointerDown(PointerInput.MouseButton.LEFT.asArg())).
+                addAction(finger2.createPointerMove(Duration.ofMillis(200),PointerInput.Origin.viewport(),centerX,endY2)).
+                addAction(finger2.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+        driver.perform(Arrays.asList(sequence1,sequence2));
     }
 
     public void performLongPress(WebElement e) {
@@ -222,6 +273,18 @@ public class BaseTest {
                 ignoring(Exception.class);
     }
 
+    static {
+        DOMConfigurator.configure("src/main/resources/log4j.xml");
+    }
+    public void scrollForwardAndSelectOption(String textToFind){
+        WebElement element = driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()." + "" +
+                "scrollable(true))" + ".scrollIntoView(new UiSelector(text(\"" + textToFind + "\")));"));
+        element.click();
+    }
 
-
+    public void scrollBackwardAndSelectOption(String textToFind){
+        WebElement element = driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()." + "" +
+                "scrollable(true))" + ".scrollBackward().scrollIntoView(new UiSelector(text(\"" + textToFind + "\")));"));
+        element.click();
+    }
 }

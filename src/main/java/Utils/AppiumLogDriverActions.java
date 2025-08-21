@@ -1,46 +1,40 @@
 package Utils;
 
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
-import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.options.UiAutomator2Options;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
-public class AppiumLogDriverActions {
 
-    private AppiumDriver driver;
-    private ExtentTest extentTest;
+import java.net.URL;
 
-    public AppiumLogDriverActions(AppiumDriver driver, ExtentTest test) {
-        this.driver = driver;
-        this.extentTest = test;
+
+public class AppiumLogDriverActions extends AndroidDriver {
+
+    public AppiumLogDriverActions(URL remoteAddress, UiAutomator2Options options) {
+        super(remoteAddress, options);
     }
 
-    public void click(By locator) {
-        try{
-            driver.findElement(locator).click();
-            extentTest.log(Status.PASS, "Clicked element " + locator.toString());
-    }catch(Exception e){
-        extentTest.log(Status.FAIL, "Error clicking element " + locator.toString());}
+    @Override
+    public WebElement findElement(By by) {
+        ExtentManager.getTest().info("Finding element: <code>" + by.toString() + "</code>");
+        WebElement element = super.findElement(by);
+        ExtentManager.getTest().info("Found element: <code>" + element.toString() + "</code>");
+        return new LoggingWebElement(element);
     }
 
-    public void sendKeys(By locator, String text) {
-        try{
-            driver.findElement(locator).sendKeys(text);
-            extentTest.log(Status.PASS, "Sent keys '" + text + "' to: " + locator.toString());
-        }catch (Exception e){
-            extentTest.log(Status.FAIL, "Error sending keys " + locator.toString());
-        }
+
+    @Override
+    public void get(String url) {
+        System.out.println("[NAVIGATE] Navigating to: " + url);
+        super.get(url);
     }
 
-    public void getText(By locator) {
-        try{
-            driver.findElement(locator).getText();
-            extentTest.log(Status.PASS, "Text '" + locator.toString() + "' to: " + locator.toString());
-        }catch (Exception e){
-            extentTest.log(Status.FAIL, "Error getting text " + locator.toString());
-        }
+    @Override
+    public void quit() {
+        System.out.println("[QUIT] Quitting driver...");
+        super.quit();
     }
-
 
 
 }
