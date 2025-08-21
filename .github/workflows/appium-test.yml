@@ -39,6 +39,10 @@ jobs:
           arch: x86_64
           profile: pixel
           script: echo "Emulator is ready"
+          
+      - name: 🔧 Add Android SDK tools to PATH
+        run: |
+         echo "$ANDROID_HOME/platform-tools" >> $GITHUB_PATH
 
       - name: 📦 Install Node.js and Appium
         run: |
