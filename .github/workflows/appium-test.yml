@@ -18,9 +18,6 @@ jobs:
     name: Android Appium Test on Emulator
     runs-on: ubuntu-latest
 
-    env:
-      ANDROID_HOME: /opt/android-sdk
-
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -31,10 +28,11 @@ jobs:
           distribution: 'temurin'
           java-version: '11'
 
-      - name: Set up ANDROID_HOME and PATH
+      - name: Ensure ANDROID_HOME, ADB & PATH
         run: |
           echo "ANDROID_HOME=/opt/android-sdk" >> $GITHUB_ENV
-          echo "PATH=$PATH:/opt/android-sdk/platform-tools" >> $GITHUB_ENV
+          echo "ANDROID_SDK_ROOT=/opt/android-sdk" >> $GITHUB_ENV
+          echo "PATH=/opt/android-sdk/platform-tools:$PATH" >> $GITHUB_ENV
           
       - name: Set up Android Emulator
         uses: reactivecircus/android-emulator-runner@v2
@@ -54,7 +52,7 @@ jobs:
 
       - name: Start Appium Server
         run: |
-          nohup appium --log appium.log > /dev/null 2>&1 &
+          nohup appium --log logs/appium-log.log > /dev/null 2>&1 &
           sleep 15
 
       - name: Set deviceIndex from input or fallback
