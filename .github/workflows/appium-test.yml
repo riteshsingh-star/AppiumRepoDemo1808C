@@ -20,7 +20,6 @@ jobs:
 
     env:
       ANDROID_HOME: /opt/android-sdk
-      PATH: ${{ env.ANDROID_HOME }}/platform-tools:${{ env.PATH }}
 
     steps:
       - name: Checkout Code
@@ -32,6 +31,11 @@ jobs:
           distribution: 'temurin'
           java-version: '11'
 
+      - name: Set up ANDROID_HOME and PATH
+        run: |
+          echo "ANDROID_HOME=/opt/android-sdk" >> $GITHUB_ENV
+          echo "PATH=$PATH:/opt/android-sdk/platform-tools" >> $GITHUB_ENV
+          
       - name: Set up Android Emulator
         uses: reactivecircus/android-emulator-runner@v2
         with:
