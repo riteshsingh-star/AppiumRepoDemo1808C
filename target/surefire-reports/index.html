@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,8 +38,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-Surefire_suite" class="navigator-link">
-              <span class="suite-name border-skipped">Surefire suite</span>
+            <a href="#" panel-name="suite-AppiumTestSuite" class="navigator-link">
+              <span class="suite-name border-failed">AppiumTestSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,37 +49,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-Surefire_suite" class="navigator-link ">
-                    <span>[unset file name]</span>
+                  <a href="#" panel-name="test-xml-AppiumTestSuite" class="navigator-link ">
+                    <span>C:\CodeCraft Code\appiumDemoFramework\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-Surefire_suite" class="navigator-link ">
+                  <a href="#" panel-name="testlist-AppiumTestSuite" class="navigator-link ">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-Surefire_suite" class="navigator-link ">
+                  <a href="#" panel-name="group-AppiumTestSuite" class="navigator-link ">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-Surefire_suite" class="navigator-link ">
+                  <a href="#" panel-name="times-AppiumTestSuite" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-Surefire_suite" class="navigator-link ">
+                  <a href="#" panel-name="reporter-AppiumTestSuite" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-Surefire_suite" class="navigator-link ">
+                  <a href="#" panel-name="ignored-methods-AppiumTestSuite" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-Surefire_suite" class="navigator-link ">
+                  <a href="#" panel-name="chronological-AppiumTestSuite" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -92,76 +92,40 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">12 methods,  12 skipped,  </span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods skipped suite-Surefire_suite"> (hide)</a> <!-- hide-methods skipped suite-Surefire_suite -->
-                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods skipped suite-Surefire_suite"> (show)</a> <!-- show-methods skipped suite-Surefire_suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-AppiumTestSuite" class="hide-methods failed suite-AppiumTestSuite"> (hide)</a> <!-- hide-methods failed suite-AppiumTestSuite -->
+                      <a href="#" panel-name="suite-AppiumTestSuite" class="show-methods failed suite-AppiumTestSuite"> (show)</a> <!-- show-methods failed suite-AppiumTestSuite -->
                     </span>
-                    <div class="method-list-content skipped suite-Surefire_suite">
+                    <div class="method-list-content failed suite-AppiumTestSuite">
                       <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="Test.WorkingWithBrowserTest" class="method navigator-link" hash-for-method="alertsDemo">alertsDemo</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-AppiumTestSuite" title="Test.WorkingWithBrowserTest" class="method navigator-link" hash-for-method="alertsDemo">alertsDemo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-AppiumTestSuite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-AppiumTestSuite" class="hide-methods passed suite-AppiumTestSuite"> (hide)</a> <!-- hide-methods passed suite-AppiumTestSuite -->
+                      <a href="#" panel-name="suite-AppiumTestSuite" class="show-methods passed suite-AppiumTestSuite"> (show)</a> <!-- show-methods passed suite-AppiumTestSuite -->
+                    </span>
+                    <div class="method-list-content passed suite-AppiumTestSuite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-AppiumTestSuite" title="Test.WorkingWithBrowserTest" class="method navigator-link" hash-for-method="demoRegisterTest">demoRegisterTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="Test.WorkingWithGeneralStoreTest" class="method navigator-link" hash-for-method="basicActionOnGeneralStoreApp">basicActionOnGeneralStoreApp</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-AppiumTestSuite" title="Test.WorkingWithBrowserTest" class="method navigator-link" hash-for-method="performBrowserAction">performBrowserAction</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="Test.WorkingWithBrowserTest" class="method navigator-link" hash-for-method="demoRegisterTest">demoRegisterTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="Test.WdioDemoTest" class="method navigator-link" hash-for-method="dragAndDropOperationOnRobotPuzzle">dragAndDropOperationOnRobotPuzzle</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="Test.WorkingWithApiDemoTest" class="method navigator-link" hash-for-method="dragDrop">dragDrop</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="Test.WorkingWithApiDemoTest" class="method navigator-link" hash-for-method="dropDownActionsTest">dropDownActionsTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="Test.WorkingWithApiDemoTest" class="method navigator-link" hash-for-method="interactWithHardwareKeys">interactWithHardwareKeys</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="Test.WorkingWithBrowserTest" class="method navigator-link" hash-for-method="performBrowserAction">performBrowserAction</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="Test.DialerAppTest" class="method navigator-link" hash-for-method="performCall">performCall</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="Test.DialerAppTest" class="method navigator-link" hash-for-method="performDialerOperation">performDialerOperation</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="Test.WorkingWithApiDemoTest" class="method navigator-link" hash-for-method="scrollSwitches">scrollSwitches</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="Test.WorkingWithApiDemoTest" class="method navigator-link" hash-for-method="simpleTextareaCheckBox">simpleTextareaCheckBox</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content skipped suite-Surefire_suite -->
+                    </div> <!-- method-list-content passed suite-AppiumTestSuite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -172,130 +136,10 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
-          <div class="suite-Surefire_suite-class-skipped">
+        <div panel-name="suite-AppiumTestSuite" class="panel AppiumTestSuite">
+          <div class="suite-AppiumTestSuite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">Test.WdioDemoTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="dragAndDropOperationOnRobotPuzzle">
-                  </a> <!-- dragAndDropOperationOnRobotPuzzle -->
-                  <span class="method-name">dragAndDropOperationOnRobotPuzzle</span>
-                  <div class="stack-trace">org.testng.TestNGException: 
-Parameter &apos;deviceIndex&apos; is required by BeforeTest on method setUp but has not been marked @Optional or defined
-
-... Removed 26 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Surefire_suite-class-skipped -->
-          <div class="suite-Surefire_suite-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">Test.WorkingWithApiDemoTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="dragDrop">
-                  </a> <!-- dragDrop -->
-                  <span class="method-name">dragDrop</span>
-                  <div class="stack-trace">org.testng.TestNGException: 
-Parameter &apos;deviceIndex&apos; is required by BeforeTest on method setUp but has not been marked @Optional or defined
-
-... Removed 26 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="dropDownActionsTest">
-                  </a> <!-- dropDownActionsTest -->
-                  <span class="method-name">dropDownActionsTest</span>
-                  <div class="stack-trace">org.testng.TestNGException: 
-Parameter &apos;deviceIndex&apos; is required by BeforeTest on method setUp but has not been marked @Optional or defined
-
-... Removed 26 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="interactWithHardwareKeys">
-                  </a> <!-- interactWithHardwareKeys -->
-                  <span class="method-name">interactWithHardwareKeys</span>
-                  <div class="stack-trace">org.testng.TestNGException: 
-Parameter &apos;deviceIndex&apos; is required by BeforeTest on method setUp but has not been marked @Optional or defined
-
-... Removed 26 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="scrollSwitches">
-                  </a> <!-- scrollSwitches -->
-                  <span class="method-name">scrollSwitches</span>
-                  <div class="stack-trace">org.testng.TestNGException: 
-Parameter &apos;deviceIndex&apos; is required by BeforeTest on method setUp but has not been marked @Optional or defined
-
-... Removed 26 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="simpleTextareaCheckBox">
-                  </a> <!-- simpleTextareaCheckBox -->
-                  <span class="method-name">simpleTextareaCheckBox</span>
-                  <div class="stack-trace">org.testng.TestNGException: 
-Parameter &apos;deviceIndex&apos; is required by BeforeTest on method setUp but has not been marked @Optional or defined
-
-... Removed 26 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Surefire_suite-class-skipped -->
-          <div class="suite-Surefire_suite-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">Test.DialerAppTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="performCall">
-                  </a> <!-- performCall -->
-                  <span class="method-name">performCall</span>
-                  <div class="stack-trace">org.testng.TestNGException: 
-Parameter &apos;deviceIndex&apos; is required by BeforeTest on method setUp but has not been marked @Optional or defined
-
-... Removed 26 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="performDialerOperation">
-                  </a> <!-- performDialerOperation -->
-                  <span class="method-name">performDialerOperation</span>
-                  <div class="stack-trace">org.testng.TestNGException: 
-Parameter &apos;deviceIndex&apos; is required by BeforeTest on method setUp but has not been marked @Optional or defined
-
-... Removed 26 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Surefire_suite-class-skipped -->
-          <div class="suite-Surefire_suite-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
+              <img src="failed.png"/>
               <span class="class-name">Test.WorkingWithBrowserTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -304,23 +148,47 @@ Parameter &apos;deviceIndex&apos; is required by BeforeTest on method setUp but 
                   <a name="alertsDemo">
                   </a> <!-- alertsDemo -->
                   <span class="method-name">alertsDemo</span>
-                  <div class="stack-trace">org.testng.TestNGException: 
-Parameter &apos;deviceIndex&apos; is required by BeforeTest on method setUp but has not been marked @Optional or defined
-
-... Removed 26 stack frames
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;btn btn-success navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-collapse&quot;&gt;...&lt;/button&gt; is not clickable at point (374, 16). Other element would receive the click: &lt;iframe id=&quot;aswift_2&quot; name=&quot;aswift_2&quot; browsingtopics=&quot;true&quot; style=&quot;min-height: auto; max-height: none; min-width: auto; max-width: none; width: 412px !important; height: 64px !important; display: block; margin: 0px auto;&quot; sandbox=&quot;allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation&quot; width=&quot;412&quot; height=&quot;64&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; vspace=&quot;0&quot; hspace=&quot;0&quot; allowtransparency=&quot;true&quot; scrolling=&quot;no&quot; allow=&quot;attribution-reporting; run-ad-auction&quot; src=&quot;https://googleads.g.doubleclick.net/pagead/html/r20250820/r20190131/zrt_lookup_fy2021.html#RS-0-&amp;amp;adk=1812271802&amp;amp;client=ca-pub-9173866185064071&amp;amp;fa=2&amp;amp;ifi=3&amp;amp;uci=a!3&amp;amp;btvi=2&quot; data-google-container-id=&quot;a!3&quot; tabindex=&quot;0&quot; title=&quot;Advertisement&quot; aria-label=&quot;Advertisement&quot; data-google-query-id=&quot;CIj2j5CYm48DFQ2OrAIdonojTg&quot; data-load-complete=&quot;true&quot;&gt;&lt;/iframe&gt;
+  (Session info: chrome=133.0.6943.137)
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [722a3016-8738-4fdd-b6aa-bd87566a7108, clickElement {id=f.2E758A683F24F8E950A20DDE27BB06FA.d.AD65873F681DCDFEE860BE075C4E1A97.e.100}]
+Capabilities {appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.android.chrome/com.goog..., appPackage: com.android.chrome, automationName: UiAutomator2, browserName: Chrome, deviceName: emulator-5554, platformName: ANDROID, plugin:images: true}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 16, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, browserName: Chrome, platformName: ANDROID, plugin:images: true}
+Element: [[AndroidDriver: Chrome on ANDROID (722a3016-8738-4fdd-b6aa-bd87566a7108)] -&gt; xpath: //span[text()=&apos;Toggle Navigation&apos;]//parent::button]
+Session ID: 722a3016-8738-4fdd-b6aa-bd87566a7108
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:244)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at page.WorkingOnMobileBrowsers.alertOptions(WorkingOnMobileBrowsers.java:98)
+	at Test.WorkingWithBrowserTest.alertsDemo(WorkingWithBrowserTest.java:50)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+... Removed 18 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-AppiumTestSuite-class-failed -->
+          <div class="suite-AppiumTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Test.WorkingWithBrowserTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
                   <a name="demoRegisterTest">
                   </a> <!-- demoRegisterTest -->
                   <span class="method-name">demoRegisterTest</span>
-                  <div class="stack-trace">org.testng.TestNGException: 
-Parameter &apos;deviceIndex&apos; is required by BeforeTest on method setUp but has not been marked @Optional or defined
-
-... Removed 26 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -328,292 +196,135 @@ Parameter &apos;deviceIndex&apos; is required by BeforeTest on method setUp but 
                   <a name="performBrowserAction">
                   </a> <!-- performBrowserAction -->
                   <span class="method-name">performBrowserAction</span>
-                  <div class="stack-trace">org.testng.TestNGException: 
-Parameter &apos;deviceIndex&apos; is required by BeforeTest on method setUp but has not been marked @Optional or defined
-
-... Removed 26 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Surefire_suite-class-skipped -->
-          <div class="suite-Surefire_suite-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">Test.WorkingWithGeneralStoreTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="basicActionOnGeneralStoreApp">
-                  </a> <!-- basicActionOnGeneralStoreApp -->
-                  <span class="method-name">basicActionOnGeneralStoreApp</span>
-                  <div class="stack-trace">org.testng.TestNGException: 
-Parameter &apos;deviceIndex&apos; is required by BeforeTest on method setUp but has not been marked @Optional or defined
-
-... Removed 26 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Surefire_suite-class-skipped -->
-        </div> <!-- panel Surefire_suite -->
-        <div panel-name="test-xml-Surefire_suite" class="panel">
+          </div> <!-- suite-AppiumTestSuite-class-passed -->
+        </div> <!-- panel AppiumTestSuite -->
+        <div panel-name="test-xml-AppiumTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\CodeCraft Code\appiumDemoFramework\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;1&quot; name=&quot;Surefire suite&quot; verbose=&quot;0&quot;&gt;
-  &lt;test thread-count=&quot;1&quot; name=&quot;Surefire test&quot; verbose=&quot;0&quot;&gt;
+&lt;suite thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;AppiumTestSuite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;Utils.Listeners&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Device1Test&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;deviceIndex&quot; value=&quot;0&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Test.DialerAppTest&quot;/&gt;
-      &lt;class name=&quot;Test.WdioDemoTest&quot;/&gt;
-      &lt;class name=&quot;Test.WorkingWithApiDemoTest&quot;/&gt;
       &lt;class name=&quot;Test.WorkingWithBrowserTest&quot;/&gt;
-      &lt;class name=&quot;Test.WorkingWithGeneralStoreTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Surefire test --&gt;
-&lt;/suite&gt; &lt;!-- Surefire suite --&gt;
+  &lt;/test&gt; &lt;!-- Device1Test --&gt;
+&lt;/suite&gt; &lt;!-- AppiumTestSuite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Surefire_suite" class="panel">
+        <div panel-name="testlist-AppiumTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Surefire suite</span>
+            <span class="header-content">Tests for AppiumTestSuite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Surefire test (5 classes)</span>
+                <span class="test-name">Device1Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Surefire_suite" class="panel">
+        <div panel-name="group-AppiumTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Surefire suite</span>
+            <span class="header-content">Groups for AppiumTestSuite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Surefire_suite" class="panel">
+        <div panel-name="times-AppiumTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Surefire suite</span>
+            <span class="header-content">Times for AppiumTestSuite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Surefire_suite');
-function tableData_Surefire_suite() {
+suiteTableInitFunctions.push('tableData_AppiumTestSuite');
+function tableData_AppiumTestSuite() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(12);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'demoRegisterTest')
 data.setCell(0, 2, 'Test.WorkingWithBrowserTest')
-data.setCell(0, 3, 0);
+data.setCell(0, 3, 32914);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'alertsDemo')
+data.setCell(1, 1, 'performBrowserAction')
 data.setCell(1, 2, 'Test.WorkingWithBrowserTest')
-data.setCell(1, 3, 0);
+data.setCell(1, 3, 15957);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'dragDrop')
-data.setCell(2, 2, 'Test.WorkingWithApiDemoTest')
-data.setCell(2, 3, 0);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'performBrowserAction')
-data.setCell(3, 2, 'Test.WorkingWithBrowserTest')
-data.setCell(3, 3, 0);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'basicActionOnGeneralStoreApp')
-data.setCell(4, 2, 'Test.WorkingWithGeneralStoreTest')
-data.setCell(4, 3, 0);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'dropDownActionsTest')
-data.setCell(5, 2, 'Test.WorkingWithApiDemoTest')
-data.setCell(5, 3, 0);
-data.setCell(6, 0, 6)
-data.setCell(6, 1, 'performCall')
-data.setCell(6, 2, 'Test.DialerAppTest')
-data.setCell(6, 3, 0);
-data.setCell(7, 0, 7)
-data.setCell(7, 1, 'interactWithHardwareKeys')
-data.setCell(7, 2, 'Test.WorkingWithApiDemoTest')
-data.setCell(7, 3, 0);
-data.setCell(8, 0, 8)
-data.setCell(8, 1, 'dragAndDropOperationOnRobotPuzzle')
-data.setCell(8, 2, 'Test.WdioDemoTest')
-data.setCell(8, 3, 0);
-data.setCell(9, 0, 9)
-data.setCell(9, 1, 'simpleTextareaCheckBox')
-data.setCell(9, 2, 'Test.WorkingWithApiDemoTest')
-data.setCell(9, 3, 0);
-data.setCell(10, 0, 10)
-data.setCell(10, 1, 'performDialerOperation')
-data.setCell(10, 2, 'Test.DialerAppTest')
-data.setCell(10, 3, 0);
-data.setCell(11, 0, 11)
-data.setCell(11, 1, 'scrollSwitches')
-data.setCell(11, 2, 'Test.WorkingWithApiDemoTest')
-data.setCell(11, 3, 0);
-window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
+data.setCell(2, 1, 'alertsDemo')
+data.setCell(2, 2, 'Test.WorkingWithBrowserTest')
+data.setCell(2, 3, 2641);
+window.suiteTableData['AppiumTestSuite']= { tableData: data, tableDiv: 'times-div-AppiumTestSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
-              <div id="times-div-Surefire_suite">
-              </div> <!-- times-div-Surefire_suite -->
+              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <div id="times-div-AppiumTestSuite">
+              </div> <!-- times-div-AppiumTestSuite -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Surefire_suite" class="panel">
+        <div panel-name="reporter-AppiumTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Surefire suite</span>
+            <span class="header-content">Reporter output for AppiumTestSuite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Surefire_suite" class="panel">
+        <div panel-name="ignored-methods-AppiumTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">8 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">Test.WdioDemoTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-                <span class="ignored-method-name">setUp</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">Test.WorkingWithApiDemoTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-                <span class="ignored-method-name">setUp</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">Test.WorkingWithBrowserTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">setUp</span>
-                <br/>
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">Test.WorkingWithGeneralStoreTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">setUp</span>
-                <br/>
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Surefire_suite" class="panel">
+        <div panel-name="chronological-AppiumTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Test.DialerAppTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setUpPage</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">performCall</span>
-                <span class="method-start">12 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">performDialerOperation</span>
-                <span class="method-start">22 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Test.WdioDemoTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setUpPage</span>
-                <span class="method-start">26 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">dragAndDropOperationOnRobotPuzzle</span>
-                <span class="method-start">27 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Test.WorkingWithApiDemoTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setUpPage</span>
-                <span class="method-start">32 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">simpleTextareaCheckBox</span>
-                <span class="method-start">33 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">dropDownActionsTest</span>
-                <span class="method-start">40 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">scrollSwitches</span>
-                <span class="method-start">45 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">dragDrop</span>
-                <span class="method-start">50 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">interactWithHardwareKeys</span>
-                <span class="method-start">56 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
               <div class="chronological-class-name">Test.WorkingWithBrowserTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setUp(0)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">setUpPage</span>
-                <span class="method-start">61 ms</span>
+                <span class="method-start">16143 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">demoRegisterTest</span>
-                <span class="method-start">63 ms</span>
+                <span class="method-start">16164 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">alertsDemo</span>
-                <span class="method-start">71 ms</span>
+                <span class="method-start">50734 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">performBrowserAction</span>
-                <span class="method-start">76 ms</span>
+                <span class="method-start">54603 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Test.WorkingWithGeneralStoreTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setUpPage</span>
-                <span class="method-start">81 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">basicActionOnGeneralStoreApp</span>
-                <span class="method-start">82 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Test.DialerAppTest</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">90 ms</span>
+                <span class="method-start">72177 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

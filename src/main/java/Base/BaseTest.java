@@ -17,6 +17,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
+
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.Collections;
@@ -53,7 +54,7 @@ public class BaseTest {
         driver.perform(Collections.singletonList(sequence));
     }
 
-    public void performPinchOperation(WebDriver driver1){
+    public void performPinchOperation(WebDriver driver1) {
         Dimension dimension = driver1.manage().window().getSize();
         int centerX = dimension.width / 2;
         int centerY = dimension.height / 2;
@@ -63,20 +64,20 @@ public class BaseTest {
 
         PointerInput finger1 = new PointerInput(PointerInput.Kind.TOUCH, "Finger");
         PointerInput finger2 = new PointerInput(PointerInput.Kind.TOUCH, "Finger");
-        Sequence sequence1=new Sequence(finger1,1).
-               addAction(finger1.createPointerMove(Duration.ZERO,PointerInput.Origin.viewport(),centerX,startY1)).
+        Sequence sequence1 = new Sequence(finger1, 1).
+                addAction(finger1.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), centerX, startY1)).
                 addAction(finger1.createPointerDown(PointerInput.MouseButton.LEFT.asArg())).
-                addAction(finger1.createPointerMove(Duration.ofMillis(200),PointerInput.Origin.viewport(),centerX,centerY)).
+                addAction(finger1.createPointerMove(Duration.ofMillis(200), PointerInput.Origin.viewport(), centerX, centerY)).
                 addAction(finger1.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
-        Sequence sequence2=new Sequence(finger2,1).
-                addAction(finger2.createPointerMove(Duration.ZERO),PointerInput.Origin.viewport(),centerX,startY2).
+        Sequence sequence2 = new Sequence(finger2, 1).
+                addAction(finger2.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), centerX, startY2)).
                 addAction(finger2.createPointerDown(PointerInput.MouseButton.LEFT.asArg())).
-                addAction(finger2.createPointerMove(Duration.ofMillis(200),PointerInput.Origin.viewport(),centerX,centerY)).
+                addAction(finger2.createPointerMove(Duration.ofMillis(200), PointerInput.Origin.viewport(), centerX, centerY)).
                 addAction(finger2.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
-        driver.perform(Arrays.asList(sequence1,sequence2));
+        driver.perform(Arrays.asList(sequence1, sequence2));
     }
 
-    public void performZoomOperation(WebDriver driver2){
+    public void performZoomOperation(WebDriver driver2) {
         Dimension dimension = driver2.manage().window().getSize();
         int centerX = dimension.width / 2;
         int centerY = dimension.height / 2;
@@ -87,18 +88,18 @@ public class BaseTest {
         PointerInput finger1 = new PointerInput(PointerInput.Kind.TOUCH, "Finger");
         PointerInput finger2 = new PointerInput(PointerInput.Kind.TOUCH, "Finger");
 
-        Sequence sequence1=new Sequence(finger1,1).
-                addAction(finger1.createPointerMove(Duration.ZERO,PointerInput.Origin.viewport(),centerX,centerY)).
+        Sequence sequence1 = new Sequence(finger1, 1).
+                addAction(finger1.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), centerX, centerY)).
                 addAction(finger1.createPointerDown(PointerInput.MouseButton.LEFT.asArg())).
-                addAction(finger1.createPointerMove(Duration.ofMillis(200),PointerInput.Origin.viewport(),centerX,endY1)).
+                addAction(finger1.createPointerMove(Duration.ofMillis(200), PointerInput.Origin.viewport(), centerX, endY1)).
                 addAction(finger1.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
 
-        Sequence sequence2=new Sequence(finger2,1).
-                addAction(finger2.createPointerMove(Duration.ZERO,PointerInput.Origin.viewport(),centerX,centerY)).
+        Sequence sequence2 = new Sequence(finger2, 1).
+                addAction(finger2.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), centerX, centerY)).
                 addAction(finger2.createPointerDown(PointerInput.MouseButton.LEFT.asArg())).
-                addAction(finger2.createPointerMove(Duration.ofMillis(200),PointerInput.Origin.viewport(),centerX,endY2)).
+                addAction(finger2.createPointerMove(Duration.ofMillis(200), PointerInput.Origin.viewport(), centerX, endY2)).
                 addAction(finger2.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
-        driver.perform(Arrays.asList(sequence1,sequence2));
+        driver.perform(Arrays.asList(sequence1, sequence2));
     }
 
     public void performLongPress(WebElement e) {
@@ -122,7 +123,7 @@ public class BaseTest {
         Dimension size2 = target.getSize();
 
         Point centerSource = new Point(location1.x + size1.width / 2, location1.y + size1.height / 2);
-        Point centerTarget=new Point(location2.x + size2.width / 2, location2.y + size2.height / 2);
+        Point centerTarget = new Point(location2.x + size2.width / 2, location2.y + size2.height / 2);
         PointerInput finger1 = new PointerInput(PointerInput.Kind.TOUCH, "finger1");
         Sequence sequence = new Sequence(finger1, 1).
                 addAction(finger1.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), centerSource)).
@@ -153,7 +154,7 @@ public class BaseTest {
         UP, DOWN, LEFT, RIGHT;
     }
 
-    public void PerformSwipeOperation(ScrollDirection direction, double scrollRatio, WebElement element) throws Exception {
+    public void performSwipeOperation(ScrollDirection direction, double scrollRatio, WebElement element) throws Exception {
         Duration duration = Duration.ofMillis(300);
         //Dimension size = driver.manage().window().getSize();
         Dimension size = element.getSize();
@@ -266,7 +267,7 @@ public class BaseTest {
         return center;
     }
 
-    public void fluentCustomPooling(){
+    public void fluentCustomPooling() {
         FluentWait<WebDriver> wait = new FluentWait<>(driver);
         wait.pollingEvery(Duration.ofMillis(500)).
                 withTimeout(Duration.ofMillis(100)).
@@ -276,13 +277,14 @@ public class BaseTest {
     static {
         DOMConfigurator.configure("src/main/resources/log4j.xml");
     }
-    public void scrollForwardAndSelectOption(String textToFind){
+
+    public void scrollForwardAndSelectOption(String textToFind) {
         WebElement element = driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()." + "" +
                 "scrollable(true))" + ".scrollIntoView(new UiSelector(text(\"" + textToFind + "\")));"));
         element.click();
     }
 
-    public void scrollBackwardAndSelectOption(String textToFind){
+    public void scrollBackwardAndSelectOption(String textToFind) {
         WebElement element = driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()." + "" +
                 "scrollable(true))" + ".scrollBackward().scrollIntoView(new UiSelector(text(\"" + textToFind + "\")));"));
         element.click();

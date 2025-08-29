@@ -84,9 +84,11 @@ public class WorkingOnMobileBrowsers extends BaseTest {
 
     public void findElementByImage() throws IOException, InterruptedException {
         syncUntil(4000);
+       // driver.setSetting(Settings.GET_MATCHED_IMAGE_RESULT, true);
         String imagePath = "src/test/resources/images/demoRegisterTest_20250819_120445.png";
         byte[] fileContent = Files.readAllBytes(Paths.get(imagePath));
         String base64Image = Base64.getEncoder().encodeToString(fileContent);
+
         WebElement imageElement = driver.findElement(AppiumBy.image(base64Image));
        System.out.println(imageElement.getText());
 

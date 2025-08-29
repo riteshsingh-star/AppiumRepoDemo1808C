@@ -7,6 +7,12 @@ import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Pause;
+import org.openqa.selenium.interactions.PointerInput;
+import org.openqa.selenium.interactions.Sequence;
+
+import java.time.Duration;
+import java.util.SequencedSet;
 
 
 public class WorkingWithAPIDemos extends BaseTest {
@@ -114,5 +120,24 @@ public class WorkingWithAPIDemos extends BaseTest {
     public void doubleClickOperation() {
         WebElement element = driver.findElement(By.xpath("//android.widget.ImageButton[@content-desc=\"Customize and control Google Chrome\"]"));
         doubleClick(element);
+    }
+
+    public void performRightToLeftSwipe(){
+        WebElement element=driver.findElement(By.xpath(""));
+        int widthVal=element.getSize().width;
+        int heightVal=element.getSize().height;
+        int startX=(int)(widthVal*0.8);
+        int startY=heightVal/2;
+        int endX=(int)(widthVal*0.2);
+        int endY=heightVal/2;
+
+        PointerInput finger=new PointerInput(PointerInput.Kind.TOUCH,"finger");
+        Sequence seq1=new Sequence(finger,1).
+                addAction(finger.createPointerMove(Duration.ZERO,PointerInput.Origin.viewport(),startX,startY)).
+                addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg())).
+                addAction(new Pause(finger,Duration.ofMillis(100))).
+                addAction(finger.createPointerMove(Duration.ofMillis(100),PointerInput.Origin.viewport(),endX,endY)).
+                addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+
     }
 }

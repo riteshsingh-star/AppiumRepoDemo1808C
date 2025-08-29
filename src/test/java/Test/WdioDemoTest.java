@@ -20,7 +20,7 @@ public class WdioDemoTest extends BaseTest {
 
 
     @Test
-    public void dragAndDropOperationOnRobotPuzzle(){
+    public void dragAndDropOperationOnRobotPuzzle() throws InterruptedException {
         logger.info("Start dragAndDropOperationOnRobotPuzzle");
         test.workingOnDragAndDropRoboPuzzle();
         logger.info("Finished dragAndDropOperationOnRobotPuzzle");

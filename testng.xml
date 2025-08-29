@@ -6,9 +6,9 @@
     </listeners>
 
     <test name="Device1Test">
-        <parameter name="deviceIndex" value="0"/>
+        <parameter name="deviceIndex" value="${deviceIndex}"/>
         <classes>
-            <class name="Test.WorkingWithBrowserTest"/>
+            <class name="Test.DialerAppTest"/>
         </classes>
     </test>
 
