@@ -1,17 +1,22 @@
 name: Run Appium Android Tests
 
 on:
+  workflow_dispatch:
+    inputs:
+      deviceIndex:
+        description: "Device index to pass to testng.xml"
+        required: false
+        default: "0"
+
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+
 jobs:
   android-tests:
     name: Android Appium Test on Emulator
     runs-on: ubuntu-latest
-
-    env:
-      ANDROID_HOME: /opt/android-sdk
 
     steps:
       - name: Checkout Code
@@ -23,15 +28,20 @@ jobs:
           distribution: 'temurin'
           java-version: '11'
 
-      - name: Install Android SDK and Emulator
+      - name: Set up Android Emulator
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 30
           target: google_apis
           arch: x86_64
           profile: pixel
-          script: |
-            echo "Emulator is ready"
+          script: echo "Emulator is ready"
+
+      - name: Ensure ANDROID_HOME, ADB & PATH
+        run: |
+         echo "ANDROID_HOME=/usr/local/lib/android/sdk" >> $GITHUB_ENV
+         echo "ANDROID_SDK_ROOT=/usr/local/lib/android/sdk" >> $GITHUB_ENV
+         echo "PATH=$PATH:/usr/local/lib/android/sdk/platform-tools" >> $GITHUB_ENV
 
       - name: Install Node.js and Appium
         run: |
@@ -42,21 +52,27 @@ jobs:
 
       - name: Start Appium Server
         run: |
-          nohup appium --log appium.log > /dev/null 2>&1 &
+          nohup appium --log logs/appium-log.log > /dev/null 2>&1 &
           sleep 15
 
-      - name: Build and Run Tests with Maven
+      - name: Set deviceIndex from input or fallback
         run: |
-          mvn clean test
+          if [ -z "${{ github.event.inputs.deviceIndex }}" ]; then
+            echo "DEVICE_INDEX=0" >> $GITHUB_ENV
+          else
+            echo "DEVICE_INDEX=${{ github.event.inputs.deviceIndex }}" >> $GITHUB_ENV
+
+      - name: Build and Run Tests with Maven (Passing deviceIndex)
+        run: mvn clean test -DdeviceIndex=${{ env.DEVICE_INDEX }}
 
       - name: Upload Test Reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
-         name: test-reports
-         path: |
-          target/surefire-reports
-          report/
+          name: test-reports
+          path: |
+            target/surefire-reports
+            report/
 
       - name: Upload Appium Logs
         if: always()
@@ -64,4 +80,3 @@ jobs:
         with:
           name: appium-logs
           path: appium.log
-    
