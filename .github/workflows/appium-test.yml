@@ -28,9 +28,6 @@ jobs:
           distribution: 'temurin'
           java-version: '11'
 
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
-
       - name: Set up Android Emulator
         uses: reactivecircus/android-emulator-runner@v2
         with:
@@ -42,9 +39,9 @@ jobs:
 
       - name: Ensure ANDROID_HOME, ADB & PATH
         run: |
-          echo "ANDROID_HOME=/opt/android-sdk" >> $GITHUB_ENV
-          echo "ANDROID_SDK_ROOT=/opt/android-sdk" >> $GITHUB_ENV
-          echo "PATH=/opt/android-sdk/platform-tools:$PATH" >> $GITHUB_ENV
+         echo "ANDROID_HOME=/usr/local/lib/android/sdk" >> $GITHUB_ENV
+         echo "ANDROID_SDK_ROOT=/usr/local/lib/android/sdk" >> $GITHUB_ENV
+         echo "PATH=$PATH:/usr/local/lib/android/sdk/platform-tools" >> $GITHUB_ENV
 
       - name: Install Node.js and Appium
         run: |
