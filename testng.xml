@@ -8,7 +8,7 @@
     <test name="Device1Test">
         <parameter name="deviceIndex" value="${deviceIndex}"/>
         <classes>
-            <class name="Test.DialerAppTest"/>
+            <class name="Test.WorkingWithApiDemoTest"/>
         </classes>
     </test>
 
