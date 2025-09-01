@@ -61,6 +61,7 @@ jobs:
             echo "DEVICE_INDEX=0" >> $GITHUB_ENV
           else
             echo "DEVICE_INDEX=${{ github.event.inputs.deviceIndex }}" >> $GITHUB_ENV
+          fi
 
       - name: Build and Run Tests with Maven (Passing deviceIndex)
         run: mvn clean test -DdeviceIndex=${{ env.DEVICE_INDEX }}
