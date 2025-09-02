@@ -4,7 +4,6 @@ import Base.BaseTest;
 import Utils.JsonUtils;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import page.WorkingOnMobileBrowsers;
 import page.WorkingWithDialerButton;
 
 import java.util.ArrayList;
