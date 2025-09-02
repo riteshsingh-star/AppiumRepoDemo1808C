@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-AppiumTestSuite" class="navigator-link">
-              <span class="suite-name border-failed">AppiumTestSuite</span>
+              <span class="suite-name border-passed">AppiumTestSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-AppiumTestSuite" class="hide-methods failed suite-AppiumTestSuite"> (hide)</a> <!-- hide-methods failed suite-AppiumTestSuite -->
-                      <a href="#" panel-name="suite-AppiumTestSuite" class="show-methods failed suite-AppiumTestSuite"> (show)</a> <!-- show-methods failed suite-AppiumTestSuite -->
-                    </span>
-                    <div class="method-list-content failed suite-AppiumTestSuite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-AppiumTestSuite" title="Test.WorkingWithBrowserTest" class="method navigator-link" hash-for-method="alertsDemo">alertsDemo</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-AppiumTestSuite -->
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -117,12 +103,27 @@
                     <div class="method-list-content passed suite-AppiumTestSuite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-AppiumTestSuite" title="Test.WorkingWithBrowserTest" class="method navigator-link" hash-for-method="demoRegisterTest">demoRegisterTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-AppiumTestSuite" title="Test.WorkingWithApiDemoTest" class="method navigator-link" hash-for-method="dragDrop">dragDrop</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-AppiumTestSuite" title="Test.WorkingWithBrowserTest" class="method navigator-link" hash-for-method="performBrowserAction">performBrowserAction</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-AppiumTestSuite" title="Test.WorkingWithApiDemoTest" class="method navigator-link" hash-for-method="dropDownActionsTest">dropDownActionsTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-AppiumTestSuite" title="Test.WorkingWithApiDemoTest" class="method navigator-link" hash-for-method="interactWithHardwareKeys">interactWithHardwareKeys</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-AppiumTestSuite" title="Test.WorkingWithApiDemoTest" class="method navigator-link" hash-for-method="scrollSwitches">scrollSwitches</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-AppiumTestSuite" title="Test.WorkingWithApiDemoTest" class="method navigator-link" hash-for-method="simpleTextareaCheckBox">simpleTextareaCheckBox</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-AppiumTestSuite -->
@@ -137,65 +138,45 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-AppiumTestSuite" class="panel AppiumTestSuite">
-          <div class="suite-AppiumTestSuite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">Test.WorkingWithBrowserTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="alertsDemo">
-                  </a> <!-- alertsDemo -->
-                  <span class="method-name">alertsDemo</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;btn btn-success navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-collapse&quot;&gt;...&lt;/button&gt; is not clickable at point (374, 16). Other element would receive the click: &lt;iframe id=&quot;aswift_2&quot; name=&quot;aswift_2&quot; browsingtopics=&quot;true&quot; style=&quot;min-height: auto; max-height: none; min-width: auto; max-width: none; width: 412px !important; height: 64px !important; display: block; margin: 0px auto;&quot; sandbox=&quot;allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation&quot; width=&quot;412&quot; height=&quot;64&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; vspace=&quot;0&quot; hspace=&quot;0&quot; allowtransparency=&quot;true&quot; scrolling=&quot;no&quot; allow=&quot;attribution-reporting; run-ad-auction&quot; src=&quot;https://googleads.g.doubleclick.net/pagead/html/r20250820/r20190131/zrt_lookup_fy2021.html#RS-0-&amp;amp;adk=1812271802&amp;amp;client=ca-pub-9173866185064071&amp;amp;fa=2&amp;amp;ifi=3&amp;amp;uci=a!3&amp;amp;btvi=2&quot; data-google-container-id=&quot;a!3&quot; tabindex=&quot;0&quot; title=&quot;Advertisement&quot; aria-label=&quot;Advertisement&quot; data-google-query-id=&quot;CIj2j5CYm48DFQ2OrAIdonojTg&quot; data-load-complete=&quot;true&quot;&gt;&lt;/iframe&gt;
-  (Session info: chrome=133.0.6943.137)
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [722a3016-8738-4fdd-b6aa-bd87566a7108, clickElement {id=f.2E758A683F24F8E950A20DDE27BB06FA.d.AD65873F681DCDFEE860BE075C4E1A97.e.100}]
-Capabilities {appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.android.chrome/com.goog..., appPackage: com.android.chrome, automationName: UiAutomator2, browserName: Chrome, deviceName: emulator-5554, platformName: ANDROID, plugin:images: true}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 16, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, browserName: Chrome, platformName: ANDROID, plugin:images: true}
-Element: [[AndroidDriver: Chrome on ANDROID (722a3016-8738-4fdd-b6aa-bd87566a7108)] -&gt; xpath: //span[text()=&apos;Toggle Navigation&apos;]//parent::button]
-Session ID: 722a3016-8738-4fdd-b6aa-bd87566a7108
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:244)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at page.WorkingOnMobileBrowsers.alertOptions(WorkingOnMobileBrowsers.java:98)
-	at Test.WorkingWithBrowserTest.alertsDemo(WorkingWithBrowserTest.java:50)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1570)
-... Removed 18 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-AppiumTestSuite-class-failed -->
           <div class="suite-AppiumTestSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">Test.WorkingWithBrowserTest</span>
+              <span class="class-name">Test.WorkingWithApiDemoTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="demoRegisterTest">
-                  </a> <!-- demoRegisterTest -->
-                  <span class="method-name">demoRegisterTest</span>
+                  <a name="dragDrop">
+                  </a> <!-- dragDrop -->
+                  <span class="method-name">dragDrop</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="performBrowserAction">
-                  </a> <!-- performBrowserAction -->
-                  <span class="method-name">performBrowserAction</span>
+                  <a name="dropDownActionsTest">
+                  </a> <!-- dropDownActionsTest -->
+                  <span class="method-name">dropDownActionsTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="interactWithHardwareKeys">
+                  </a> <!-- interactWithHardwareKeys -->
+                  <span class="method-name">interactWithHardwareKeys</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="scrollSwitches">
+                  </a> <!-- scrollSwitches -->
+                  <span class="method-name">scrollSwitches</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="simpleTextareaCheckBox">
+                  </a> <!-- simpleTextareaCheckBox -->
+                  <span class="method-name">simpleTextareaCheckBox</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -216,7 +197,7 @@ Session ID: 722a3016-8738-4fdd-b6aa-bd87566a7108
   &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Device1Test&quot; verbose=&quot;0&quot;&gt;
     &lt;parameter name=&quot;deviceIndex&quot; value=&quot;0&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Test.WorkingWithBrowserTest&quot;/&gt;
+      &lt;class name=&quot;Test.WorkingWithApiDemoTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Device1Test --&gt;
 &lt;/suite&gt; &lt;!-- AppiumTestSuite --&gt;
@@ -256,19 +237,27 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'demoRegisterTest')
-data.setCell(0, 2, 'Test.WorkingWithBrowserTest')
-data.setCell(0, 3, 32914);
+data.setCell(0, 1, 'scrollSwitches')
+data.setCell(0, 2, 'Test.WorkingWithApiDemoTest')
+data.setCell(0, 3, 13242);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'performBrowserAction')
-data.setCell(1, 2, 'Test.WorkingWithBrowserTest')
-data.setCell(1, 3, 15957);
+data.setCell(1, 1, 'interactWithHardwareKeys')
+data.setCell(1, 2, 'Test.WorkingWithApiDemoTest')
+data.setCell(1, 3, 13104);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'alertsDemo')
-data.setCell(2, 2, 'Test.WorkingWithBrowserTest')
-data.setCell(2, 3, 2641);
+data.setCell(2, 1, 'simpleTextareaCheckBox')
+data.setCell(2, 2, 'Test.WorkingWithApiDemoTest')
+data.setCell(2, 3, 10796);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'dragDrop')
+data.setCell(3, 2, 'Test.WorkingWithApiDemoTest')
+data.setCell(3, 3, 7945);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'dropDownActionsTest')
+data.setCell(4, 2, 'Test.WorkingWithApiDemoTest')
+data.setCell(4, 3, 6052);
 window.suiteTableData['AppiumTestSuite']= { tableData: data, tableDiv: 'times-div-AppiumTestSuite'}
 return data;
 }
@@ -299,32 +288,38 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Test.WorkingWithBrowserTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Test.WorkingWithApiDemoTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUp(0)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">setUpPage</span>
-                <span class="method-start">16143 ms</span>
+                <span class="method-start">48390 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">demoRegisterTest</span>
-                <span class="method-start">16164 ms</span>
+                <span class="method-name">simpleTextareaCheckBox</span>
+                <span class="method-start">48432 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">alertsDemo</span>
-                <span class="method-start">50734 ms</span>
+                <span class="method-name">dropDownActionsTest</span>
+                <span class="method-start">60758 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">performBrowserAction</span>
-                <span class="method-start">54603 ms</span>
+                <span class="method-name">scrollSwitches</span>
+                <span class="method-start">68530 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">dragDrop</span>
+                <span class="method-start">83528 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">interactWithHardwareKeys</span>
+                <span class="method-start">93102 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">72177 ms</span>
+                <span class="method-start">110107 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

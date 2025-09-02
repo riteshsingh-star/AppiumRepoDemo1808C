@@ -9,36 +9,14 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">AppiumTestSuite</th></tr>
-<tr><td><a href="#t0">Device1Test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">75,173</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Device1Test</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">111,549</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">AppiumTestSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Device1Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Test.WorkingWithBrowserTest</td><td><a href="#m0">alertsDemo</a></td><td rowspan="1">1755754777442</td><td rowspan="1">2641</td></tr><tr><th colspan="4">Device1Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">Test.WorkingWithBrowserTest</td><td><a href="#m1">demoRegisterTest</a></td><td rowspan="1">1755754742872</td><td rowspan="1">32914</td></tr><tr class="passedeven"><td><a href="#m2">performBrowserAction</a></td><td rowspan="1">1755754781311</td><td rowspan="1">15957</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">AppiumTestSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Device1Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">Test.WorkingWithApiDemoTest</td><td><a href="#m0">dragDrop</a></td><td rowspan="1">1756788564946</td><td rowspan="1">7945</td></tr><tr class="passedeven"><td><a href="#m1">dropDownActionsTest</a></td><td rowspan="1">1756788542176</td><td rowspan="1">6052</td></tr><tr class="passedeven"><td><a href="#m2">interactWithHardwareKeys</a></td><td rowspan="1">1756788574520</td><td rowspan="1">13104</td></tr><tr class="passedeven"><td><a href="#m3">scrollSwitches</a></td><td rowspan="1">1756788549948</td><td rowspan="1">13242</td></tr><tr class="passedeven"><td><a href="#m4">simpleTextareaCheckBox</a></td><td rowspan="1">1756788529850</td><td rowspan="1">10796</td></tr></tbody>
 </table>
-<h2>Device1Test</h2><h3 id="m0">Test.WorkingWithBrowserTest#alertsDemo</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;btn btn-success navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-collapse&quot;&gt;...&lt;/button&gt; is not clickable at point (374, 16). Other element would receive the click: &lt;iframe id=&quot;aswift_2&quot; name=&quot;aswift_2&quot; browsingtopics=&quot;true&quot; style=&quot;min-height: auto; max-height: none; min-width: auto; max-width: none; width: 412px !important; height: 64px !important; display: block; margin: 0px auto;&quot; sandbox=&quot;allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation&quot; width=&quot;412&quot; height=&quot;64&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; vspace=&quot;0&quot; hspace=&quot;0&quot; allowtransparency=&quot;true&quot; scrolling=&quot;no&quot; allow=&quot;attribution-reporting; run-ad-auction&quot; src=&quot;https://googleads.g.doubleclick.net/pagead/html/r20250820/r20190131/zrt_lookup_fy2021.html#RS-0-&amp;amp;adk=1812271802&amp;amp;client=ca-pub-9173866185064071&amp;amp;fa=2&amp;amp;ifi=3&amp;amp;uci=a!3&amp;amp;btvi=2&quot; data-google-container-id=&quot;a!3&quot; tabindex=&quot;0&quot; title=&quot;Advertisement&quot; aria-label=&quot;Advertisement&quot; data-google-query-id=&quot;CIj2j5CYm48DFQ2OrAIdonojTg&quot; data-load-complete=&quot;true&quot;&gt;&lt;/iframe&gt;
-  (Session info: chrome=133.0.6943.137)
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [722a3016-8738-4fdd-b6aa-bd87566a7108, clickElement {id=f.2E758A683F24F8E950A20DDE27BB06FA.d.AD65873F681DCDFEE860BE075C4E1A97.e.100}]
-Capabilities {appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.android.chrome/com.goog..., appPackage: com.android.chrome, automationName: UiAutomator2, browserName: Chrome, deviceName: emulator-5554, platformName: ANDROID, plugin:images: true}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 16, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, browserName: Chrome, platformName: ANDROID, plugin:images: true}
-Element: [[AndroidDriver: Chrome on ANDROID (722a3016-8738-4fdd-b6aa-bd87566a7108)] -&gt; xpath: //span[text()=&apos;Toggle Navigation&apos;]//parent::button]
-Session ID: 722a3016-8738-4fdd-b6aa-bd87566a7108
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:244)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at page.WorkingOnMobileBrowsers.alertOptions(WorkingOnMobileBrowsers.java:98)
-	at Test.WorkingWithBrowserTest.alertsDemo(WorkingWithBrowserTest.java:50)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1570)
-... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">Test.WorkingWithBrowserTest#demoRegisterTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">Test.WorkingWithBrowserTest#performBrowserAction</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Device1Test</h2><h3 id="m0">Test.WorkingWithApiDemoTest#dragDrop</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">Test.WorkingWithApiDemoTest#dropDownActionsTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">Test.WorkingWithApiDemoTest#interactWithHardwareKeys</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">Test.WorkingWithApiDemoTest#scrollSwitches</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">Test.WorkingWithApiDemoTest#simpleTextareaCheckBox</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
