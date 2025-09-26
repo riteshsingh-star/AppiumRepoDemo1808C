@@ -24,74 +24,74 @@ public class WorkingOnMobileBrowsers extends BaseTest {
     }
 
     @FindBy(xpath = "//input[@placeholder='Username']")
-    private By admin;
+    private WebElement admin;
 
     @FindBy(xpath = "//input[@placeholder='Password']")
-    private By password;
+    private WebElement password;
 
     @FindBy(xpath = "//button[text()=' Login ']")
-    private By login;
+    private WebElement login;
 
     @FindBy(xpath = "//input[@placeholder='First Name']")
-    private By firstName;
+    private WebElement firstName;
 
     @FindBy(xpath = "//input[@placeholder='Last Name']")
-    private By lastName;
+    private WebElement lastName;
 
     @FindBy(xpath = "//textarea[@ng-model='Adress']")
-    private By address;
+    private WebElement address;
 
     @FindBy(xpath = "//input[@ng-model='EmailAdress']")
-    private By email;
+    private WebElement email;
 
     @FindBy(xpath = "//input[@ng-model='Phone']")
-    private By phone;
+    private WebElement phone;
 
     @FindBy(xpath = "//option[text()='APIs']")
-    private By dropDownOption;
+    private WebElement dropDownOption;
 
     @FindBy(xpath = "//select[@id='Skills']")
-    private By dropDown;
+    private WebElement dropDown;
 
     @FindBy(xpath = "//select[@placeholder='Year']")
-    private By dobYear;
+    private WebElement dobYear;
 
     @FindBy(xpath = "//select[@placeholder='Month']")
-    private By dobMonth;
+    private WebElement dobMonth;
 
     @FindBy(xpath = "//select[@placeholder='Day']")
-    private By dobDay;
+    private WebElement dobDay;
 
     @FindBy(xpath = "//input[@ng-model='Password']")
-    private By passwordDemoQA;
+    private WebElement passwordDemoQA;
 
     @FindBy(xpath = "//input[@ng-model='CPassword']")
-    private By confirmPassword;
+    private WebElement confirmPassword;
 
     @FindBy(xpath = "//span[text()='Toggle Navigation']//parent::button")
-    private By toogleButton;
+    private WebElement toogleButton;
 
     @FindBy(xpath = "//a[text()='SwitchTo']")
-    private By switchTo;
+    private WebElement switchTo;
 
     @FindBy(xpath = "//a[text()='Alerts']")
-    private By alerts;
+    private WebElement alerts;
 
     @FindBy(xpath = "(//button[contains(@class,'btn btn')])[2]")
-    private By alertConfirm;
+    private WebElement alertConfirm;
 
     public void automateOrangeHRM(String userName, String passwordValue) throws InterruptedException {
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         syncUntil(8000);
-        driver.findElement(admin).click();
-        driver.findElement(admin).sendKeys(userName);
-        driver.findElement(password).click();
-        driver.findElement(password).sendKeys(passwordValue);
-        driver.findElement(login).click();
+        admin.click();
+        admin.sendKeys(userName);
+        password.click();
+        password.sendKeys(passwordValue);
+        login.click();
     }
 
-    public void selectClassForBrowserDropDown(By locator, String text) {
-        Select dropdown = new Select(driver.findElement(locator));
+    public void selectClassForBrowserDropDown(WebElement locator, String text) {
+        Select dropdown = new Select(locator);
         dropdown.selectByVisibleText(text);
     }
 
@@ -100,26 +100,26 @@ public class WorkingOnMobileBrowsers extends BaseTest {
                              String skills, String year, String month, String day, String password) throws InterruptedException {
         driver.get("https://demo.automationtesting.in/Register.html");
         syncUntil(4000);
-        driver.findElement(firstName).click();
-        driver.findElement(firstName).sendKeys(firstNameVal);
-        driver.findElement(lastName).click();
-        driver.findElement(lastName).sendKeys(lastNameVal);
-        driver.findElement(address).click();
-        driver.findElement(address).sendKeys(add);
-        driver.findElement(email).click();
-        driver.findElement(email).sendKeys(emailVal);
-        driver.findElement(phone).click();
-        driver.findElement(phone).sendKeys(phoneNum);
+        firstName.click();
+        firstName.sendKeys(firstNameVal);
+        lastName.click();
+        lastName.sendKeys(lastNameVal);
+        address.click();
+        address.sendKeys(add);
+        email.click();
+        email.sendKeys(emailVal);
+        phone.click();
+        phone.sendKeys(phoneNum);
         driver.findElement(By.xpath("//input[@value='" + gender + "']")).click();
         driver.findElement(By.xpath("//input[@value='" + hobbies + "']")).click();
         selectClassForBrowserDropDown(dropDown, skills);
         selectClassForBrowserDropDown(dobYear, year);
         selectClassForBrowserDropDown(dobMonth, month);
         selectClassForBrowserDropDown(dobDay, day);
-        driver.findElement(passwordDemoQA).click();
-        driver.findElement(passwordDemoQA).sendKeys(password);
-        driver.findElement(confirmPassword).click();
-        driver.findElement(confirmPassword).sendKeys(password);
+        passwordDemoQA.click();
+        passwordDemoQA.sendKeys(password);
+        confirmPassword.click();
+        confirmPassword.sendKeys(password);
     }
 
     public void findElementByImage() throws IOException, InterruptedException {
@@ -135,10 +135,10 @@ public class WorkingOnMobileBrowsers extends BaseTest {
     }
 
     public void alertOptions() {
-        driver.findElement(toogleButton).click();
-        driver.findElement(switchTo).click();
-        driver.findElement(alerts).click();
-        driver.findElement(alertConfirm).click();
+        toogleButton.click();
+        switchTo.click();
+        alerts.click();
+        alertConfirm.click();
         driver.switchTo().alert().accept();
 
     }

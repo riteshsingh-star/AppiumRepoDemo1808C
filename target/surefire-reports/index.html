@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 3 failed,   </span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,20 +103,24 @@
                     <div class="method-list-content failed suite-AppiumTestSuite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-AppiumTestSuite" title="Test.WorkingWithBrowserTest" class="method navigator-link" hash-for-method="alertsDemo">alertsDemo</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-AppiumTestSuite" title="Test.WorkingWithBrowserTest" class="method navigator-link" hash-for-method="demoRegisterTest">demoRegisterTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
+                    </div> <!-- method-list-content failed suite-AppiumTestSuite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-AppiumTestSuite" class="hide-methods passed suite-AppiumTestSuite"> (hide)</a> <!-- hide-methods passed suite-AppiumTestSuite -->
+                      <a href="#" panel-name="suite-AppiumTestSuite" class="show-methods passed suite-AppiumTestSuite"> (show)</a> <!-- show-methods passed suite-AppiumTestSuite -->
+                    </span>
+                    <div class="method-list-content passed suite-AppiumTestSuite">
                       <span>
-                        <img src="failed.png" width="3%"/>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-AppiumTestSuite" title="Test.WorkingWithBrowserTest" class="method navigator-link" hash-for-method="performBrowserAction">performBrowserAction</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-AppiumTestSuite -->
+                    </div> <!-- method-list-content passed suite-AppiumTestSuite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -136,89 +140,56 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="alertsDemo">
-                  </a> <!-- alertsDemo -->
-                  <span class="method-name">alertsDemo</span>
-                  <div class="stack-trace">java.lang.IllegalArgumentException: Locator must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:63)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-	at page.WorkingOnMobileBrowsers.alertOptions(WorkingOnMobileBrowsers.java:138)
-	at Test.WorkingWithBrowserTest.alertsDemo(WorkingWithBrowserTest.java:50)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1570)
-... Removed 15 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="demoRegisterTest">
                   </a> <!-- demoRegisterTest -->
                   <span class="method-name">demoRegisterTest</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error attempting to start URI. Original error: Error: Error executing adbExec. Original error: &apos;Command &apos;&apos;C:\\Users\\Ritesh Kumar Singh\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe&apos; -P 5037 -s emulator-5554 shell am start -W -a android.intent.action.VIEW -d https\://demo.automationtesting.in/Register.html com.androidsample.generalstore&apos; exited with code 1&apos;; Command output: Starting: Intent { act=android.intent.action.VIEW dat=https://demo.automationtesting.in/... pkg=com.androidsample.generalstore }
-Error: Activity not started, unable to resolve Intent { act=android.intent.action.VIEW dat=https://demo.automationtesting.in/... flg=0x10000000 xflg=0x4 pkg=com.androidsample.generalstore }
-
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input type=&quot;text&quot; placeholder=&quot;First Name&quot; class=&quot;form-control ng-pristine ng-untouched ng-invalid ng-invalid-required&quot; ng-model=&quot;FirstName&quot; required=&quot;&quot;&gt; is not clickable at point (171, 298). Other element would receive the click: &lt;iframe id=&quot;aswift_3&quot; name=&quot;aswift_3&quot; browsingtopics=&quot;true&quot; style=&quot;min-height: auto; max-height: none; min-width: auto; max-width: none; width: 411px !important; display: block; margin: 0px auto; height: 343px !important;&quot; sandbox=&quot;allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation&quot; width=&quot;411&quot; height=&quot;100%&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; vspace=&quot;0&quot; hspace=&quot;0&quot; allowtransparency=&quot;true&quot; scrolling=&quot;no&quot; allow=&quot;attribution-reporting; run-ad-auction&quot; src=&quot;https://googleads.g.doubleclick.net/pagead/html/r20250924/r20190131/zrt_lookup_fy2021.html#RS-0-&amp;amp;adk=1812271802&amp;amp;client=ca-pub-9173866185064071&amp;amp;fa=2&amp;amp;ifi=4&amp;amp;uci=a!4&amp;amp;btvi=3&quot; data-google-container-id=&quot;a!4&quot; tabindex=&quot;0&quot; title=&quot;Advertisement&quot; aria-label=&quot;Advertisement&quot; data-google-query-id=&quot;CNL14dHx9Y8DFQNfDwIdGF8XCQ&quot; data-load-complete=&quot;true&quot;&gt;&lt;/iframe&gt;
+  (Session info: chrome=140.0.7339.207)
 Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [ff2fac89-3e74-453d-abe6-1b71fb03090f, get {url=https://demo.automationtesting.in/Register.html}]
-Capabilities {appium:app: C:\CodeCraft Code\appiumDem..., appium:appActivity: com.androidsample.generalst..., appium:appPackage: com.androidsample.generalstore, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\CodeCraft Code\appiumDem..., automationName: UiAutomator2, deviceName: emulator-5554, platformName: ANDROID}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 16, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: ff2fac89-3e74-453d-abe6-1b71fb03090f
+Command: [3342d8ec-5831-49a9-9afb-37768162d495, clickElement {id=f.C5851B63159C3DA60B1A4EE86B508146.d.4081AD34B257973E9213489D469F34B8.e.43}]
+Capabilities {appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.android.chrome/com.goog..., appPackage: com.android.chrome, automationName: UiAutomator2, browserName: Chrome, deviceName: emulator-5554, platformName: ANDROID, plugin:images: true}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 16, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, browserName: Chrome, platformName: ANDROID, plugin:images: true}
+Element: [[AndroidDriver: Chrome on ANDROID (3342d8ec-5831-49a9-9afb-37768162d495)] -&gt; xpath: //input[@placeholder=&apos;First Name&apos;]]
+Session ID: 3342d8ec-5831-49a9-9afb-37768162d495
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
 	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:244)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:312)
-	at page.WorkingOnMobileBrowsers.demoRegister(WorkingOnMobileBrowsers.java:101)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
+	at page.WorkingOnMobileBrowsers.demoRegister(WorkingOnMobileBrowsers.java:103)
 	at Test.WorkingWithBrowserTest.demoRegisterTest(WorkingWithBrowserTest.java:38)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1570)
-... Removed 18 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="performBrowserAction">
-                  </a> <!-- performBrowserAction -->
-                  <span class="method-name">performBrowserAction</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error attempting to start URI. Original error: Error: Error executing adbExec. Original error: &apos;Command &apos;&apos;C:\\Users\\Ritesh Kumar Singh\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe&apos; -P 5037 -s emulator-5554 shell am start -W -a android.intent.action.VIEW -d https\://opensource-demo.orangehrmlive.com/web/index.php/auth/login com.androidsample.generalstore&apos; exited with code 1&apos;; Command output: Starting: Intent { act=android.intent.action.VIEW dat=https://opensource-demo.orangehrmlive.com/... pkg=com.androidsample.generalstore }
-Error: Activity not started, unable to resolve Intent { act=android.intent.action.VIEW dat=https://opensource-demo.orangehrmlive.com/... flg=0x10000000 xflg=0x4 pkg=com.androidsample.generalstore }
-
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [ff2fac89-3e74-453d-abe6-1b71fb03090f, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
-Capabilities {appium:app: C:\CodeCraft Code\appiumDem..., appium:appActivity: com.androidsample.generalst..., appium:appPackage: com.androidsample.generalstore, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\CodeCraft Code\appiumDem..., automationName: UiAutomator2, deviceName: emulator-5554, platformName: ANDROID}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 16, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: ff2fac89-3e74-453d-abe6-1b71fb03090f
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:244)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:312)
-	at page.WorkingOnMobileBrowsers.automateOrangeHRM(WorkingOnMobileBrowsers.java:84)
-	at Test.WorkingWithBrowserTest.performBrowserAction(WorkingWithBrowserTest.java:33)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1570)
-... Removed 18 stack frames
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+... Removed 26 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-AppiumTestSuite-class-failed -->
+          <div class="suite-AppiumTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Test.WorkingWithBrowserTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="performBrowserAction">
+                  </a> <!-- performBrowserAction -->
+                  <span class="method-name">performBrowserAction</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-AppiumTestSuite-class-passed -->
         </div> <!-- panel AppiumTestSuite -->
         <div panel-name="test-xml-AppiumTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -275,24 +246,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'demoRegisterTest')
+data.setCell(0, 1, 'performBrowserAction')
 data.setCell(0, 2, 'Test.WorkingWithBrowserTest')
-data.setCell(0, 3, 1711);
+data.setCell(0, 3, 20223);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'performBrowserAction')
+data.setCell(1, 1, 'demoRegisterTest')
 data.setCell(1, 2, 'Test.WorkingWithBrowserTest')
-data.setCell(1, 3, 1024);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'alertsDemo')
-data.setCell(2, 2, 'Test.WorkingWithBrowserTest')
-data.setCell(2, 3, 858);
+data.setCell(1, 3, 12385);
 window.suiteTableData['AppiumTestSuite']= { tableData: data, tableDiv: 'times-div-AppiumTestSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 20 seconds</span>
+              <span class="suite-total-time">Total running time: 50 seconds</span>
               <div id="times-div-AppiumTestSuite">
               </div> <!-- times-div-AppiumTestSuite -->
             </div> <!-- times-div -->
@@ -325,25 +292,17 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">setUpPage</span>
-                <span class="method-start">9610 ms</span>
+                <span class="method-start">13476 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">demoRegisterTest</span>
-                <span class="method-start">9634 ms</span>
+                <span class="method-start">13523 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">alertsDemo</span>
-                <span class="method-start">14413 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">performBrowserAction</span>
-                <span class="method-start">17480 ms</span>
+                <span class="method-start">28887 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

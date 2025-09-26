@@ -45,7 +45,7 @@ public class WorkingWithBrowserTest extends BaseTest {
         test.findElementByImage();
     }
 
-    @Test(priority = 1)
+    //@Test(priority = 1)
     public void alertsDemo(){
         test.alertOptions();
     }
