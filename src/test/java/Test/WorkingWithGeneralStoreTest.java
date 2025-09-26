@@ -23,6 +23,7 @@ public class WorkingWithGeneralStoreTest extends BaseTest {
 
     @Test
     public void basicActionOnGeneralStoreApp() throws Exception {
+        syncUntil(5000);
         String dropDownValue=data.get("dropDownValue");
         String nameValue=data.get("nameValue");
         String gender=data.get("gender");

@@ -2,48 +2,81 @@ package page;
 
 import Base.BaseTest;
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
+import io.appium.java_client.pagefactory.AndroidFindBy;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.qameta.allure.Step;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Pause;
 import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
 import java.time.Duration;
 
 public class WorkingWithAPIDemos extends BaseTest {
 
-    public WorkingWithAPIDemos(AndroidDriver driver) {
+    static final Logger logger = Logger.getLogger(WorkingWithAPIDemos.class);
+    AndroidDriver androidDriver;
+    public WorkingWithAPIDemos(AppiumDriver driver) {
         this.driver = driver;
+        PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(10)), this);
+        androidDriver = (AndroidDriver) driver;
     }
 
-    private By view = By.xpath("//android.widget.TextView[@content-desc='Views']");
-    private By control = By.xpath("//android.widget.TextView[@content-desc='Controls']");
-    private By lightTheme = AppiumBy.accessibilityId("1. Light Theme");
-    private By textField = By.id("io.appium.android.apis:id/edit");
-    private By checkBox = AppiumBy.accessibilityId("Checkbox 2");
-    private By radioButton = By.id("io.appium.android.apis:id/radio2");
-    private By dropdown = By.id("io.appium.android.apis:id/spinner1");
-    private By dropDownOption = By.id("android:id/text1");
-    private By dragAndDrop=AppiumBy.accessibilityId("Drag and Drop");
-    private By dragSorces=By.xpath("//android.view.View[@resource-id='io.appium.android.apis:id/drag_dot_1']");
-    private By dropTarget=By.xpath("//android.view.View[@resource-id='io.appium.android.apis:id/drag_dot_2']");
+    @FindBy(xpath = "//android.widget.TextView[@content-desc='Views']")
+    private WebElement view;
+
+    @FindBy(xpath = "//android.widget.TextView[@content-desc='Controls']")
+    private WebElement control;
+
+    @AndroidFindBy(accessibility = "1. Light Theme")
+    private WebElement lightTheme;
+
+    @FindBy(id = "io.appium.android.apis:id/edit")
+    private WebElement textField;
+
+    @AndroidFindBy(accessibility = "Checkbox 2")
+    private WebElement checkBox;
+
+    @FindBy(id = "io.appium.android.apis:id/radio2")
+    private WebElement radioButton;
+
+    @FindBy(id = "io.appium.android.apis:id/spinner1")
+    private WebElement dropdown;
+
+    private final By dropDownOption=AppiumBy.id("android:id/text1");
+
+    @AndroidFindBy(accessibility = "Drag and Drop")
+    private WebElement dragAndDrop;
+
+    @FindBy(xpath = "//android.view.View[@resource-id='io.appium.android.apis:id/drag_dot_1']")
+    private WebElement dragSources;
+
+    @FindBy(xpath = "//android.view.View[@resource-id='io.appium.android.apis:id/drag_dot_2']")
+    private WebElement dropTarget;
 
 
-
+    @Step
     public void simpleCheckBoxTextArea(String text) {
         System.out.println("Application Started");
-        driver.findElement(view).click();
-        driver.findElement(control).click();
-        driver.findElement(lightTheme).click();
-        driver.findElement(textField).sendKeys(text);
-        driver.findElement(checkBox).click();
-        driver.findElement(radioButton).click();
+        view.click();
+        control.click();
+        lightTheme.click();
+        textField.sendKeys(text);
+        checkBox.click();
+        radioButton.click();
     }
 
+    @Step
     public void dropDownActions() throws InterruptedException {
-        driver.findElement(dropdown).click();
+        dropdown.click();
         syncUntil(2000);
         driver.findElements(dropDownOption).get(2).click();
         System.out.println("DropDown Element Selected");
@@ -51,18 +84,17 @@ public class WorkingWithAPIDemos extends BaseTest {
         driver.navigate().back();
     }
 
+    @Step
     public void dragAndDrop() throws Exception {
-
-        driver.findElement(view).click();
-        driver.findElement(dragAndDrop).click();
-        WebElement source = driver.findElement(dragSorces);
-        WebElement target = driver.findElement(dropTarget);
-        dragAndDrop(source, target);
+        view.click();
+        dragAndDrop.click();
+        dragAndDrop(dragSources, dropTarget);
         System.out.println("Drag and Drop is successfully");
         driver.navigate().back();
         driver.navigate().back();
     }
 
+    @Step
     public void scrollAndSwitches() {
         String switches = "Switches";
         WebElement element = driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()." +
@@ -70,47 +102,47 @@ public class WorkingWithAPIDemos extends BaseTest {
         element.click();
         WebElement monitoredSwitch = driver.findElement(By.xpath("//android.widget.Switch[@content-desc='Monitored switch']"));
         if (monitoredSwitch.isSelected())
-            System.out.println("Monitored Switch is selected");
+            logger.info("Monitored Switch is selected");
         else {
-            System.out.println("Monitored Switch is off.Doing Switch ON");
+            logger.info("Monitored Switch is off.Doing Switch ON");
             monitoredSwitch.click();
         }
         driver.navigate().back();
         driver.navigate().back();
     }
 
-
-
+    @Step
     public void hardwareKeysInteraction() throws Exception {
-        driver.findElement(view).click();
-        driver.findElement(control).click();
+        view.click();
+        control.click();
         //performing back operation
-        driver.pressKey(new KeyEvent(AndroidKey.BACK));
+        androidDriver.pressKey(new KeyEvent(AndroidKey.BACK));
         //perform back to home operation
-        driver.pressKey(new KeyEvent(AndroidKey.HOME));
+        androidDriver.pressKey(new KeyEvent(AndroidKey.HOME));
         //perform increasing the volume
-        driver.pressKey(new KeyEvent(AndroidKey.VOLUME_UP));
+        androidDriver.pressKey(new KeyEvent(AndroidKey.VOLUME_UP));
         //perform decreasing the volume
-        driver.pressKey(new KeyEvent(AndroidKey.VOLUME_DOWN));
+        androidDriver.pressKey(new KeyEvent(AndroidKey.VOLUME_DOWN));
         //perform mute on volume button
-        driver.pressKey(new KeyEvent(AndroidKey.VOLUME_MUTE));
+        androidDriver.pressKey(new KeyEvent(AndroidKey.VOLUME_MUTE));
         //perform switch off operation
         //driver.pressKey(new KeyEvent(AndroidKey.POWER));
         //perform switch on operation
         //driver.pressKey(new KeyEvent(AndroidKey.POWER));
 
         //Thread.sleep(8000);
-        driver.pressKey(new KeyEvent(AndroidKey.HOME));
-        driver.pressKey(new KeyEvent(AndroidKey.CALENDAR));
+        androidDriver.pressKey(new KeyEvent(AndroidKey.HOME));
+        androidDriver.pressKey(new KeyEvent(AndroidKey.CALENDAR));
     }
 
+    @Step
     public void installAndUninstall() throws Exception {
         Thread.sleep(2000);
-        if (driver.isAppInstalled("io.appium.android.apis")) {
-            driver.removeApp("io.appium.android.apis");
+        if (androidDriver.isAppInstalled("io.appium.android.apis")) {
+            androidDriver.removeApp("io.appium.android.apis");
         }
 
-        driver.installApp("C:\\CodeCraft Code\\appiumDemoFramework\\apps\\ApiDemos-debug.apk");
+        androidDriver.installApp("C:\\CodeCraft Code\\appiumDemoFramework\\apps\\ApiDemos-debug.apk");
         //driver.reset
     }
 

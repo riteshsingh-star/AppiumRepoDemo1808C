@@ -68,6 +68,7 @@ public class Listeners implements ITestListener, ISuiteListener{
     public void onTestSkipped(ITestResult result) {
         testThread.get().log(Status.SKIP, "Test skipped: " + result.getThrowable());
         logger.info(result.getMethod().getMethodName()+"Skipped");
+        saveVideo(result.getMethod().getMethodName());
     }
 
     @Override
@@ -83,12 +84,6 @@ public class Listeners implements ITestListener, ISuiteListener{
     @Override
     public void onFinish(ISuite suite) {
         extent.flush();
-        try {
-            Runtime.getRuntime().exec("cmd /c start cmd.exe /K \"allure generate allure-results --clean -o allure-report && allure open allure-report\"");
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     private AppiumDriver getDriverFromBase(Object instance) {

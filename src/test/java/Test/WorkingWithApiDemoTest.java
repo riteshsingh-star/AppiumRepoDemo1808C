@@ -16,6 +16,7 @@ public class WorkingWithApiDemoTest extends BaseTest {
 
     @BeforeClass
     public void setUpPage() {
+        //test = new WorkingWithAPIDemos(driver);
         test = new WorkingWithAPIDemos(driver);
         testData= JsonUtils.getJsonArrayFromJsonFile("ApiDemos.json");
         data = testData.get(0);
@@ -47,7 +48,7 @@ public class WorkingWithApiDemoTest extends BaseTest {
         test.hardwareKeysInteraction();
     }
 
-   // @Test(priority = 5)
+    @Test(priority = 5)
     public void installAndUninstallApps() throws Exception {
         test.installAndUninstall();
     }

@@ -2,6 +2,7 @@ package drivers;
 
 import Utils.AppiumLogDriverActions;
 import Utils.JsonUtils;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import org.apache.log4j.BasicConfigurator;
@@ -31,7 +32,7 @@ public class DriverManager {
 
         String testType = data.get("testType");
         BasicConfigurator.configure();
-
+//BaseOptions
         UiAutomator2Options options = new UiAutomator2Options();
         options.setPlatformName(data.get("platformName"));
         options.setDeviceName(data.get("deviceName"));
@@ -70,7 +71,7 @@ public class DriverManager {
 
     }
 
-    public static AndroidDriver getDriver() {
+    public static AppiumDriver getDriver() {
         return driver.get();
     }
 

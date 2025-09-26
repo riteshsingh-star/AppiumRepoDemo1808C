@@ -5,7 +5,7 @@
     "platformVersion": "16.0",
     "automationName": "UiAutomator2",
     "FilePath": "C:\\CodeCraft Code\\appiumDemoFramework\\apps",
-    "AppName": "ApiDemos-debug",
+    "AppName": "General-Store",
     "AppPackage": "com.google.android.dialer",
     "AppActivity": "com.google.android.dialer.extensions.GoogleDialtactsActivity",
     "BrowserName": "Chrome",

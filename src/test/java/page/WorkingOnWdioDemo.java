@@ -2,34 +2,44 @@ package page;
 
 import Base.BaseTest;
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.pagefactory.AndroidFindBy;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class WorkingOnWdioDemo extends BaseTest {
 
-    public WorkingOnWdioDemo(AndroidDriver driver) {
+    public WorkingOnWdioDemo(AppiumDriver driver) {
         this.driver = driver;
+        PageFactory.initElements(driver, this);
     }
 
-    private By dragNDrop = By.xpath("//android.widget.TextView[@text=\"Drag\"]");
-    private By successMessage=AppiumBy.androidUIAutomator("new UiSelector().text(\"You made it, click retry if you want to try it again.\")");
-    private By swipe=By.xpath("//android.widget.TextView[@text=\"\uDB82\uDD3C\"]");
+    @FindBy(xpath = "//android.widget.TextView[@text=\"Drag\"]")
+    private WebElement dragNDrop;
+
+    @AndroidFindBy(accessibility = "new UiSelector().text(\"You made it, click retry if you want to try it again.\")")
+    private WebElement successMessage;
+
+    @FindBy(xpath = "//android.widget.TextView[@text=\"\uDB82\uDD3C\"]")
+    private WebElement swipe;
 
     public void workingOnDragAndDropRoboPuzzle() throws InterruptedException {
         syncUntil(4000);
-            driver.findElement(dragNDrop).click();
+            dragNDrop.click();
             for(int i=0;i<getSourceItems.size();i++){
                 dragAndDrop(getEl(getSourceItems.get(i)),getEl(getTargetItems.get(i)));
             }
-            System.out.println(driver.findElement(successMessage).getText());
+            System.out.println(successMessage.getText());
     }
 
     public void workingOnSwipeAction() throws InterruptedException {
-        driver.findElement(swipe).click();
+       swipe.click();
         Thread.sleep(4000);
         WebElement element = driver.findElement(By.xpath("(//android.view.ViewGroup[@content-desc='card'])[1]"));
         Thread.sleep(2000);

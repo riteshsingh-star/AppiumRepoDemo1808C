@@ -3,9 +3,12 @@ package Base;
 import com.google.common.collect.ImmutableList;
 import drivers.DriverManager;
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
+import org.junit.After;
+import org.junit.Before;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
@@ -27,9 +30,9 @@ public class BaseTest {
 
     static final Logger logger = Logger.getLogger(BaseTest.class);
 
-    public AndroidDriver driver;
+    public AppiumDriver driver;
 
-
+//Before
     @BeforeTest(alwaysRun = true)
     @Parameters({"deviceIndex"})
     public void setUp(int deviceIndex) {
@@ -38,7 +41,7 @@ public class BaseTest {
         logger.info("Driver initialized");
     }
 
-    @AfterTest
+    @After
     public void tearDown() {
         driver.quit();
         logger.info("Driver closed");
@@ -144,7 +147,7 @@ public class BaseTest {
                 addAction(finger.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), centerX, centerY)).
                 addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg())).
                 addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg())).
-                addAction(new Pause(finger, Duration.ofMillis(100))).
+                addAction(new Pause(finger, Duration.ofMillis(200))).
                 addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg())).
                 addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
         driver.perform(Collections.singletonList(sequence));
@@ -247,7 +250,8 @@ public class BaseTest {
         driver.perform(ImmutableList.of(sequence));
     }
 
-    public AndroidDriver getDriver() {
+//Appium Driver
+    public AppiumDriver getDriver() {
         return driver;
     }
 

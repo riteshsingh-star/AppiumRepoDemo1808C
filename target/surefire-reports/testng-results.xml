@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="0" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-02T10:18:01 IST" name="AppiumTestSuite" finished-at="2025-09-02T10:19:52 IST" duration-ms="111549">
+  <suite started-at="2025-09-24T11:59:43 IST" name="AppiumTestSuite" finished-at="2025-09-24T12:00:03 IST" duration-ms="20616">
     <groups>
     </groups>
-    <test started-at="2025-09-02T10:18:01 IST" name="Device1Test" finished-at="2025-09-02T10:19:52 IST" duration-ms="111549">
-      <class name="Test.WorkingWithApiDemoTest">
-        <test-method is-config="true" signature="setUp(int)[pri:0, instance:Test.WorkingWithApiDemoTest@3bcbb589]" started-at="2025-09-02T10:18:01 IST" name="setUp" finished-at="2025-09-02T10:18:49 IST" duration-ms="48356" status="PASS">
+    <test started-at="2025-09-24T11:59:43 IST" name="Device1Test" finished-at="2025-09-24T12:00:03 IST" duration-ms="20616">
+      <class name="Test.WorkingWithBrowserTest">
+        <test-method is-config="true" signature="setUp(int)[pri:0, instance:Test.WorkingWithBrowserTest@4372b9b6]" started-at="2025-09-24T11:59:43 IST" name="setUp" finished-at="2025-09-24T11:59:52 IST" duration-ms="9577" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,35 +18,170 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUpPage()[pri:0, instance:Test.WorkingWithApiDemoTest@3bcbb589]" started-at="2025-09-02T10:18:49 IST" name="setUpPage" finished-at="2025-09-02T10:18:49 IST" duration-ms="23" status="PASS">
+        <test-method is-config="true" signature="setUpPage()[pri:0, instance:Test.WorkingWithBrowserTest@4372b9b6]" started-at="2025-09-24T11:59:52 IST" name="setUpPage" finished-at="2025-09-24T11:59:52 IST" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpPage -->
-        <test-method signature="simpleTextareaCheckBox()[pri:0, instance:Test.WorkingWithApiDemoTest@3bcbb589]" started-at="2025-09-02T10:18:49 IST" name="simpleTextareaCheckBox" finished-at="2025-09-02T10:19:00 IST" duration-ms="10796" status="PASS">
+        <test-method signature="demoRegisterTest()[pri:0, instance:Test.WorkingWithBrowserTest@4372b9b6]" started-at="2025-09-24T11:59:52 IST" name="demoRegisterTest" finished-at="2025-09-24T11:59:54 IST" duration-ms="1711" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[An unknown server-side error occurred while processing the command. Original error: Error attempting to start URI. Original error: Error: Error executing adbExec. Original error: 'Command ''C:\\Users\\Ritesh Kumar Singh\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe' -P 5037 -s emulator-5554 shell am start -W -a android.intent.action.VIEW -d https\://demo.automationtesting.in/Register.html com.androidsample.generalstore' exited with code 1'; Command output: Starting: Intent { act=android.intent.action.VIEW dat=https://demo.automationtesting.in/... pkg=com.androidsample.generalstore }
+Error: Activity not started, unable to resolve Intent { act=android.intent.action.VIEW dat=https://demo.automationtesting.in/... flg=0x10000000 xflg=0x4 pkg=com.androidsample.generalstore }
+
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [ff2fac89-3e74-453d-abe6-1b71fb03090f, get {url=https://demo.automationtesting.in/Register.html}]
+Capabilities {appium:app: C:\CodeCraft Code\appiumDem..., appium:appActivity: com.androidsample.generalst..., appium:appPackage: com.androidsample.generalstore, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\CodeCraft Code\appiumDem..., automationName: UiAutomator2, deviceName: emulator-5554, platformName: ANDROID}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 16, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: ff2fac89-3e74-453d-abe6-1b71fb03090f]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error attempting to start URI. Original error: Error: Error executing adbExec. Original error: 'Command ''C:\\Users\\Ritesh Kumar Singh\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe' -P 5037 -s emulator-5554 shell am start -W -a android.intent.action.VIEW -d https\://demo.automationtesting.in/Register.html com.androidsample.generalstore' exited with code 1'; Command output: Starting: Intent { act=android.intent.action.VIEW dat=https://demo.automationtesting.in/... pkg=com.androidsample.generalstore }
+Error: Activity not started, unable to resolve Intent { act=android.intent.action.VIEW dat=https://demo.automationtesting.in/... flg=0x10000000 xflg=0x4 pkg=com.androidsample.generalstore }
+
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [ff2fac89-3e74-453d-abe6-1b71fb03090f, get {url=https://demo.automationtesting.in/Register.html}]
+Capabilities {appium:app: C:\CodeCraft Code\appiumDem..., appium:appActivity: com.androidsample.generalst..., appium:appPackage: com.androidsample.generalstore, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\CodeCraft Code\appiumDem..., automationName: UiAutomator2, deviceName: emulator-5554, platformName: ANDROID}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 16, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: ff2fac89-3e74-453d-abe6-1b71fb03090f
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:244)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:312)
+at page.WorkingOnMobileBrowsers.demoRegister(WorkingOnMobileBrowsers.java:101)
+at Test.WorkingWithBrowserTest.demoRegisterTest(WorkingWithBrowserTest.java:38)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1570)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- simpleTextareaCheckBox -->
-        <test-method signature="dropDownActionsTest()[pri:1, instance:Test.WorkingWithApiDemoTest@3bcbb589]" started-at="2025-09-02T10:19:02 IST" name="dropDownActionsTest" finished-at="2025-09-02T10:19:08 IST" duration-ms="6052" status="PASS">
+        </test-method> <!-- demoRegisterTest -->
+        <test-method signature="alertsDemo()[pri:1, instance:Test.WorkingWithBrowserTest@4372b9b6]" started-at="2025-09-24T11:59:57 IST" name="alertsDemo" finished-at="2025-09-24T11:59:58 IST" duration-ms="858" status="FAIL">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Locator must be set]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Locator must be set
+at org.openqa.selenium.internal.Require.nonNull(Require.java:63)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+at page.WorkingOnMobileBrowsers.alertOptions(WorkingOnMobileBrowsers.java:138)
+at Test.WorkingWithBrowserTest.alertsDemo(WorkingWithBrowserTest.java:50)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1570)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- dropDownActionsTest -->
-        <test-method signature="scrollSwitches()[pri:2, instance:Test.WorkingWithApiDemoTest@3bcbb589]" started-at="2025-09-02T10:19:09 IST" name="scrollSwitches" finished-at="2025-09-02T10:19:23 IST" duration-ms="13242" status="PASS">
+        </test-method> <!-- alertsDemo -->
+        <test-method signature="performBrowserAction()[pri:2, instance:Test.WorkingWithBrowserTest@4372b9b6]" started-at="2025-09-24T12:00:00 IST" name="performBrowserAction" finished-at="2025-09-24T12:00:01 IST" duration-ms="1024" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[An unknown server-side error occurred while processing the command. Original error: Error attempting to start URI. Original error: Error: Error executing adbExec. Original error: 'Command ''C:\\Users\\Ritesh Kumar Singh\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe' -P 5037 -s emulator-5554 shell am start -W -a android.intent.action.VIEW -d https\://opensource-demo.orangehrmlive.com/web/index.php/auth/login com.androidsample.generalstore' exited with code 1'; Command output: Starting: Intent { act=android.intent.action.VIEW dat=https://opensource-demo.orangehrmlive.com/... pkg=com.androidsample.generalstore }
+Error: Activity not started, unable to resolve Intent { act=android.intent.action.VIEW dat=https://opensource-demo.orangehrmlive.com/... flg=0x10000000 xflg=0x4 pkg=com.androidsample.generalstore }
+
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [ff2fac89-3e74-453d-abe6-1b71fb03090f, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {appium:app: C:\CodeCraft Code\appiumDem..., appium:appActivity: com.androidsample.generalst..., appium:appPackage: com.androidsample.generalstore, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\CodeCraft Code\appiumDem..., automationName: UiAutomator2, deviceName: emulator-5554, platformName: ANDROID}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 16, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: ff2fac89-3e74-453d-abe6-1b71fb03090f]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error attempting to start URI. Original error: Error: Error executing adbExec. Original error: 'Command ''C:\\Users\\Ritesh Kumar Singh\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe' -P 5037 -s emulator-5554 shell am start -W -a android.intent.action.VIEW -d https\://opensource-demo.orangehrmlive.com/web/index.php/auth/login com.androidsample.generalstore' exited with code 1'; Command output: Starting: Intent { act=android.intent.action.VIEW dat=https://opensource-demo.orangehrmlive.com/... pkg=com.androidsample.generalstore }
+Error: Activity not started, unable to resolve Intent { act=android.intent.action.VIEW dat=https://opensource-demo.orangehrmlive.com/... flg=0x10000000 xflg=0x4 pkg=com.androidsample.generalstore }
+
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [ff2fac89-3e74-453d-abe6-1b71fb03090f, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {appium:app: C:\CodeCraft Code\appiumDem..., appium:appActivity: com.androidsample.generalst..., appium:appPackage: com.androidsample.generalstore, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\CodeCraft Code\appiumDem..., automationName: UiAutomator2, deviceName: emulator-5554, platformName: ANDROID}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 16, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 2337, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: ff2fac89-3e74-453d-abe6-1b71fb03090f
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:244)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:312)
+at page.WorkingOnMobileBrowsers.automateOrangeHRM(WorkingOnMobileBrowsers.java:84)
+at Test.WorkingWithBrowserTest.performBrowserAction(WorkingWithBrowserTest.java:33)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1570)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- scrollSwitches -->
-        <test-method signature="dragDrop()[pri:3, instance:Test.WorkingWithApiDemoTest@3bcbb589]" started-at="2025-09-02T10:19:24 IST" name="dragDrop" finished-at="2025-09-02T10:19:32 IST" duration-ms="7945" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dragDrop -->
-        <test-method signature="interactWithHardwareKeys()[pri:4, instance:Test.WorkingWithApiDemoTest@3bcbb589]" started-at="2025-09-02T10:19:34 IST" name="interactWithHardwareKeys" finished-at="2025-09-02T10:19:47 IST" duration-ms="13104" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- interactWithHardwareKeys -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test.WorkingWithApiDemoTest@3bcbb589]" started-at="2025-09-02T10:19:51 IST" name="tearDown" finished-at="2025-09-02T10:19:52 IST" duration-ms="1429" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Test.WorkingWithApiDemoTest -->
+        </test-method> <!-- performBrowserAction -->
+      </class> <!-- Test.WorkingWithBrowserTest -->
     </test> <!-- Device1Test -->
   </suite> <!-- AppiumTestSuite -->
 </testng-results>
