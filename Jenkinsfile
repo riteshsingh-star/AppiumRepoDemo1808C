@@ -6,13 +6,14 @@ pipeline {
     }
 
     environment {
-        ANDROID_HOME = '/usr/local/lib/android/sdk'
-        ANDROID_SDK_ROOT = '/usr/local/lib/android/sdk'
-        PATH = "${env.PATH}:${ANDROID_HOME}/platform-tools"
+        // Set Android SDK path - update this to your actual SDK path
+        ANDROID_HOME = 'C:\\Users\\YourUsername\\AppData\\Local\\Android\\Sdk'
+        ANDROID_SDK_ROOT = 'C:\\Users\\YourUsername\\AppData\\Local\\Android\\Sdk'
+        PATH = "${env.PATH};${ANDROID_HOME}\\platform-tools"
     }
 
     tools {
-        jdk 'jdk-17'  // Make sure this name matches exactly in Global Tool Configuration
+        jdk 'jdk-17'  // Ensure this name matches the JDK in Jenkins Global Tool Config
     }
 
     stages {
@@ -24,15 +25,14 @@ pipeline {
 
         stage('Verify Java Installation') {
             steps {
-                sh 'java -version'
+                bat 'java -version'
             }
         }
 
         stage('Set up Node.js and Appium') {
             steps {
-                sh '''
-                    curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-                    sudo apt-get install -y nodejs
+                bat '''
+                    choco install nodejs -y
                     npm install -g appium
                     appium driver install uiautomator2
                 '''
@@ -41,39 +41,37 @@ pipeline {
 
         stage('Start Android Emulator') {
             steps {
-                sh '''
-                    echo "no" | avdmanager create avd -n testEmulator -k "system-images;android-36;google_apis;x86_64" --device "pixel" || true
-                    emulator -avd testEmulator -no-window -no-audio -no-boot-anim -gpu swiftshader_indirect &
+                bat '''
+                    echo no | avdmanager create avd -n testEmulator -k "system-images;android-33;google_apis;x86_64" --device "pixel" || exit /b 0
+                    start /B emulator -avd testEmulator -no-window -no-audio -no-boot-anim -gpu swiftshader_indirect
                     adb wait-for-device
                     adb shell input keyevent 82
-                    sleep 30
+                    timeout /T 30
                 '''
             }
         }
 
         stage('Start Appium Server') {
             steps {
-                sh '''
-                    mkdir -p logs
-                    nohup appium --log logs/appium-log.log > /dev/null 2>&1 &
-                    sleep 15
+                bat '''
+                    if not exist logs mkdir logs
+                    start /B appium --log logs\\appium-log.log
+                    timeout /T 15
                 '''
             }
         }
 
         stage('Run Maven Tests') {
             steps {
-                sh """
-                    mvn clean test -DdeviceIndex=${params.deviceIndex}
-                """
+                bat "mvn clean test -DdeviceIndex=${params.deviceIndex}"
             }
         }
     }
 
     post {
         always {
-            archiveArtifacts artifacts: 'target/surefire-reports/**/*.*', allowEmptyArchive: true
-            archiveArtifacts artifacts: 'logs/appium-log.log', allowEmptyArchive: true
+            archiveArtifacts artifacts: 'target\\surefire-reports\\**\\*.*', allowEmptyArchive: true
+            archiveArtifacts artifacts: 'logs\\appium-log.log', allowEmptyArchive: true
         }
         failure {
             echo 'Build failed. Check test reports and logs.'
