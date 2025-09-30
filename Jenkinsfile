@@ -20,11 +20,18 @@ pipeline {
             }
         }
 
-        stage('Set up Java 17') {
-            tools {
-                jdk 'jdk-17' // Make sure 'jdk-17' is installed in Jenkins
+        tools {
+        jdk 'jdk-17'  // tool name configured in Jenkins
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                sh 'java -version'
+                // your build commands here
             }
         }
+    }
 
         stage('Set up Node.js and Appium') {
             steps {
