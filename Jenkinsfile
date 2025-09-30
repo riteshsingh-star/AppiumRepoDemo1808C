@@ -13,6 +13,10 @@ pipeline {
         PATH = "${env.PATH}:${ANDROID_HOME}/platform-tools"
     }
 
+    tools {
+        jdk 'jdk-17'  // Make sure this is configured in Jenkins Global Tool Configuration
+    }
+
     stages {
         stage('Checkout Code') {
             steps {
@@ -20,18 +24,12 @@ pipeline {
             }
         }
 
-        tools {
-        jdk 'jdk-17'  // tool name configured in Jenkins
-    }
-
-    stages {
         stage('Build') {
             steps {
                 sh 'java -version'
                 // your build commands here
             }
         }
-    }
 
         stage('Set up Node.js and Appium') {
             steps {
@@ -67,12 +65,11 @@ pipeline {
 
         stage('Run Maven Tests') {
             steps {
-                sh '''
-                    mvn clean test -DdeviceIndex=${deviceIndex}
-                '''
+                sh """
+                    mvn clean test -DdeviceIndex=${params.deviceIndex}
+                """
             }
         }
-
     }
 
     post {
