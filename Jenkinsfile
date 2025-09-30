@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'android' // Ensure your Jenkins agent has Android SDK installed or use Docker
+        label any // Ensure your Jenkins agent has Android SDK installed or use Docker
     }
 
     parameters {
