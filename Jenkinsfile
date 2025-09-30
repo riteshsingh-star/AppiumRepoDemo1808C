@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        label any // Ensure your Jenkins agent has Android SDK installed or use Docker
-    }
+    agent any // Use any available agent
 
     parameters {
         string(name: 'deviceIndex', defaultValue: '0', description: 'Device index to pass to testng.xml')
@@ -14,7 +12,7 @@ pipeline {
     }
 
     tools {
-        jdk 'jdk-17'  // Make sure this is configured in Jenkins Global Tool Configuration
+        jdk 'jdk-17'  // Make sure this name matches exactly in Global Tool Configuration
     }
 
     stages {
@@ -24,10 +22,9 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('Verify Java Installation') {
             steps {
                 sh 'java -version'
-                // your build commands here
             }
         }
 
@@ -57,6 +54,7 @@ pipeline {
         stage('Start Appium Server') {
             steps {
                 sh '''
+                    mkdir -p logs
                     nohup appium --log logs/appium-log.log > /dev/null 2>&1 &
                     sleep 15
                 '''
